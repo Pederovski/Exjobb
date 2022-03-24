@@ -1203,3 +1203,58 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.03.24-13.39.58:566][149]SourceControl:  1 file changed, 13 insertions(+)
 [2022.03.24-13.39.58:566][149]SourceControl:  create mode 100644 MyProject/MyProject.uproject
 [2022.03.24-13.39.58:575][149]SourceControl: Commited [main 98d8f8f] First.
+[2022.03.24-13.45.48:582][122]LogSlate: Took 0.013635 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.03.24-13.46.21:092][293]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.24-13.46.21:692][314]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Table)
+[2022.03.24-13.46.22:490][374]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.24-13.46.37:792][532]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.24-13.46.39:290][653]LogEditorViewport: Clicking on Actor (LMB): TextRenderActor (TextRenderActor)
+[2022.03.24-13.46.56:259][ 11]LogEditorViewport: Clicking on Actor (LMB): TextRenderActor (TextRenderActor)
+[2022.03.24-13.47.00:759][412]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2022.03.24-13.47.01:869][503]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Chair)
+[2022.03.24-13.47.02:342][539]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Chair)
+[2022.03.24-13.47.02:846][581]LogEditorViewport: Clicking on Actor (LMB): TextRenderActor (TextRenderActor)
+[2022.03.24-13.47.09:760][238]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.03.24-13.47.18:368][998]LogSlate: Took 0.001020 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2022.03.24-13.47.18:458][998]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2022.03.24-13.47.18:492][998]LogSavePackage: Moving '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Saved/Minimal_DefaultF6D833FC4EE8F51D6327D8BD9EEB2E96.tmp' to '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Content/StarterContent/Maps/Minimal_Default.umap'
+[2022.03.24-13.47.18:727][998]LogSavePackage: Moving '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Saved/Minimal_Default_BuiltData5B918B264965FB516745E9BB98E641C7.tmp' to '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset'
+[2022.03.24-13.47.18:736][998]AssetCheck: New page: Asset Save: multiple assets
+[2022.03.24-13.47.18:736][998]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/StarterContent/Maps/Minimal_Default_BuiltData.Minimal_Default_BuiltData
+[2022.03.24-13.47.18:736][998]LogContentValidation: Display: Validating World /Game/StarterContent/Maps/Minimal_Default.Minimal_Default
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Content: 'C:/UE_4.27/Engine/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/2D/Paper2D/Content: 'C:/UE_4.27/Engine/Plugins/2D/Paper2D/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Developer/AnimationSharing/Content: 'C:/UE_4.27/Engine/Plugins/Developer/AnimationSharing/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/ChaosClothEditor/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/ChaosClothEditor/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/ChaosNiagara/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/ChaosNiagara/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/ChaosSolverPlugin/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/ChaosSolverPlugin/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:260][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/GeometryCollectionPlugin/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/GeometryCollectionPlugin/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/FX/Niagara/Content: 'C:/UE_4.27/Engine/Plugins/FX/Niagara/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/GeometryProcessing/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/GeometryProcessing/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/MotoSynth/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/MotoSynth/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Experimental/PythonScriptPlugin/Content: 'C:/UE_4.27/Engine/Plugins/Experimental/PythonScriptPlugin/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Lumin/MagicLeap/Content: 'C:/UE_4.27/Engine/Plugins/Lumin/MagicLeap/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Lumin/MagicLeapPassableWorld/Content: 'C:/UE_4.27/Engine/Plugins/Lumin/MagicLeapPassableWorld/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Media/MediaCompositing/Content: 'C:/UE_4.27/Engine/Plugins/Media/MediaCompositing/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Editor/GeometryMode/Content: 'C:/UE_4.27/Engine/Plugins/Editor/GeometryMode/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Editor/SpeedTreeImporter/Content: 'C:/UE_4.27/Engine/Plugins/Editor/SpeedTreeImporter/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/AudioSynesthesia/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/AudioSynesthesia/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/OpenXR/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/OpenXR/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/OpenXREyeTracker/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/OpenXREyeTracker/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/OpenXRHandTracking/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/OpenXRHandTracking/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/PostSplashScreen/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/PostSplashScreen/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/Synthesis/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/Synthesis/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/VirtualProduction/Takes/Content: 'C:/UE_4.27/Engine/Plugins/VirtualProduction/Takes/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Enterprise/DatasmithContent/Content: 'C:/UE_4.27/Engine/Plugins/Enterprise/DatasmithContent/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/Oculus/OculusVR/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/Oculus/OculusVR/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.24:261][396]SourceControl: fatal: C:/UE_4.27/Engine/Plugins/Runtime/Steam/SteamVR/Content: 'C:/UE_4.27/Engine/Plugins/Runtime/Steam/SteamVR/Content' is outside repository at 'C:/Users/Peder/Desktop/Exjobb/ExjobbGit'
+[2022.03.24-13.47.25:097][396]LogUObjectHash: Compacting FUObjectHashTables data took   0.27ms
+[2022.03.24-13.47.25:116][396]LogSavePackage: Moving '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Saved/Minimal_Default46BB9FD148F799D38EBC8D95DFC3C69F.tmp' to '../../../../Users/Peder/Desktop/Exjobb/ExjobbGit/MyProject/Content/StarterContent/Maps/Minimal_Default.umap'
+[2022.03.24-13.47.25:120][396]LogFileHelpers: Saving map 'Minimal_Default' took 0.032
+[2022.03.24-13.49.06:347][396]LogSlate: Window 'Submit Files' being destroyed
+[2022.03.24-13.49.06:829][396]LogSourceControl: commit successful: [main 6178d5a] Test commit till Nirvanna
+[2022.03.24-13.49.06:917][396]SourceControl: [main 6178d5a] Test commit till Nirvanna
+[2022.03.24-13.49.06:917][396]SourceControl:  1 file changed, 0 insertions(+), 0 deletions(-)
+[2022.03.24-13.49.06:923][396]SourceControl: Commited [main 6178d5a] Test commit till Nirvanna.
+[2022.03.24-13.49.06:953][397]AssetCheck: New page: Asset Save: Minimal_Default
+[2022.03.24-13.49.06:953][397]LogContentValidation: Display: Validating World /Game/StarterContent/Maps/Minimal_Default.Minimal_Default
