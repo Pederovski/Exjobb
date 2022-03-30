@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "MyProject",
-			"Path": "C:\\Users\\Peder\\Desktop\\Exjobb\\ExjobbGit\\MyProject\\Source\\MyProject.Target.cs",
+			"Path": "C:\\Users\\Peder\\Desktop\\Exjobb\\Exjobb\\MyProject\\Source\\MyProject.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "MyProjectEditor",
-			"Path": "C:\\Users\\Peder\\Desktop\\Exjobb\\ExjobbGit\\MyProject\\Source\\MyProjectEditor.Target.cs",
+			"Path": "C:\\Users\\Peder\\Desktop\\Exjobb\\Exjobb\\MyProject\\Source\\MyProjectEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

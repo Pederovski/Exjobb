@@ -1,0 +1,119 @@
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    background: gray;
+    /*background-image: linear-gradient(black, black, grey, grey, black);*/
+    /*background-image: linear-gradient(black, orange, black);*/
+    background-size: cover;
+    background-repeat: repeat+x;
+}
+
+.puzzlebody {
+    /*background-image: linear-gradient(black, orange);*/
+    background: gray;
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+/* ESCAPE THE DECISION ARENA */
+h1 { 
+    color: white;
+    margin-left: 30px;
+}
+
+/* PUZZLE/CONTROL ROOM */
+h3 { 
+    color:white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    padding: 10px;
+}
+
+/* Link text */
+a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: plum;
+}
+
+a:active {
+    color: pink;
+}
+
+/* * * * * * */
+
+button {
+    width: 100px;
+    height: 20px;
+    margin: 10px;
+}
+
+input {
+    padding: 2px;
+    margin: 6px;
+}
+
+.mainbody {
+    flex-direction: column;
+    align-items: center;
+}
+
+.middlebody {
+    flex-direction: row;
+    display: inline;
+    margin: auto;
+    align-items: center;
+}
+
+div {
+    /*background: red;*/
+    display: inline;
+}
+
+.puzzle13 {
+    color: white;
+    display: inline;
+    padding: 10px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.puzzle2exit {
+    color: white;
+    display: inline;
+    padding: 5px;
+}
+
+.puzzleroomexit {
+    margin: auto;
+}
+
+.entercode {
+    margin: auto;
+}
+
+.inputcode {
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}

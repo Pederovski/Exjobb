@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{783A2CD2-F4A2-408D-AF24-A7B89C9AD8A3}</UniqueIdentifier>
+      <UniqueIdentifier>{2F3BB517-FE2E-4232-A280-06A2BB27F3CF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A5CC5CFF-10CF-4753-B672-54B1C7E20701}</UniqueIdentifier>
+      <UniqueIdentifier>{B4996E7F-A0C3-4EF6-AC9C-DC3163568432}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject">
-      <UniqueIdentifier>{8515B893-7591-4564-99B7-B5150A15BE39}</UniqueIdentifier>
+      <UniqueIdentifier>{DFC12BAA-2A33-4305-9BC9-58407846F920}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject\MyProject.Build.cs">
       <Filter>Source\MyProject</Filter>
@@ -45,6 +45,12 @@
       <Filter>Source\MyProject</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyProject\MyTestClass.h">
+      <Filter>Source\MyProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject\WebSocketGameInstance.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject\WebSocketGameInstance.h">
       <Filter>Source\MyProject</Filter>
     </ClInclude>
   </ItemGroup>
