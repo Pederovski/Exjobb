@@ -37,12 +37,12 @@
         var socket = new WebSocket('ws://localhost:5500');
         socket.onopen = function(event) {
             console.log('Connection open in Puzzle3');
-            socket.send('Puzzle3 is live. \n');
+            socket.send('Trigger3');
         }
         // Send signal to Unreal to trigger puzzle
         function triggerPuzzle3() {
             console.log("Trigger puzzle 3");
-            socket.send("Trigger puzzle 3");
+            socket.send("TriggerPuzzle3");
         }
         // Send puzzle input to Unreal
         function submitPuzzle3() {

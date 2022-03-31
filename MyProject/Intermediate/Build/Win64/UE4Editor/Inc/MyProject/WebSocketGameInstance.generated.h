@@ -16,6 +16,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWebSocketGameInstance(); \
@@ -64,13 +66,17 @@ public: \
 	FORCEINLINE static uint32 __PPO__OutputText() { return STRUCT_OFFSET(UWebSocketGameInstance, OutputText); }
 
 
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_14_PROLOG
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_14_PROLOG \
+	MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS
+
+
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_PRIVATE_PROPERTY_OFFSET \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
+	MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_STANDARD_CONSTRUCTORS \
 public: \
@@ -83,6 +89,7 @@ public: \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_PRIVATE_PROPERTY_OFFSET \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS_NO_PURE_DECLS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_ENHANCED_CONSTRUCTORS \
 private: \

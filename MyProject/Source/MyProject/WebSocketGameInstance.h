@@ -16,7 +16,19 @@ class MYPROJECT_API UWebSocketGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
+
 public:
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void TriggerPuzzle1event();
+	//UFUNCTION(BlueprintImplementableEvent)
+	//void GoToControlRoom();
+	UFUNCTION(BlueprintImplementableEvent)
+	void GoToPuzzle1();
+	//UFUNCTION(BlueprintImplementableEvent)
+	//void GoToPuzzle2();
+	//UFUNCTION(BlueprintImplementableEvent)
+	//void GoToPuzzle();
 
 	virtual void Init() override;
 	virtual void Shutdown() override;
@@ -29,6 +41,8 @@ private:
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "True"))
 	FString OutputText = "Hello from C++";
+
+ 
 
 	bool InControlRoom = true;
 	bool InPuzzle1 = false;

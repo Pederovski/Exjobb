@@ -31,25 +31,87 @@ void UWebSocketGameInstance::Init() {
 	WebSocket->OnMessage().AddLambda([this](const FString& MessageString) {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Received message: " + MessageString);
 
-		std::string converted = TCHAR_TO_UTF8(*MessageString);
-		FString HappyString0(converted.c_str());
-		FString compare = "Trigger1";
+		//Check if we are in puzzle1
+		FString Trigger1 = "Trigger1";
+		const FString& Trigger1Ref = Trigger1;
+		bool isTrigger1 = MessageString.Equals(Trigger1Ref);
 
-		const FString& compareRef = compare;
+		//Check if we are in puzzle2
+		FString Trigger2 = "Trigger2";
+		const FString& Trigger2Ref = Trigger2;
+		bool isTrigger2 = MessageString.Equals(Trigger2Ref);
 
-		//For debugging
-		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Converted: " + HappyString0);
+		//Check if we are in puzzle3
+		FString Trigger3 = "Trigger3";
+		const FString& Trigger3Ref = Trigger3;
+		bool isTrigger3 = MessageString.Equals(Trigger3Ref);
 
-		if (MessageString.Equals(compareRef)) {
+		if (isTrigger1) {
 			InControlRoom = false;
 			InPuzzle1 = true;
-
+			GoToPuzzle1();
 			OutputText = "Im in puzzle1 woho :)";
 		}
 
-		OutputText = "Im not in puzzle 1 :(";
-		//std::string const s = TCHAR_TO_UTF8(*MessageString); //Convert from FString to string
-		});
+		if (isTrigger2) {
+			InControlRoom = false;
+			InPuzzle2 = true;
+
+			OutputText = "Im in puzzle2 woho :)";
+		}
+
+		if (isTrigger3) {
+			InControlRoom = false;
+			InPuzzle3 = true;
+
+			OutputText = "Im in puzzle3 woho :)";
+		}
+
+		//Go to correct room
+		//if (InControlRoom)
+		//{
+		//	//GoToControlRoom();
+		//}
+		//if (InPuzzle1)
+		//{
+		//	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I will now go to puzzle1");
+		//}		
+		//if (InPuzzle2)
+		//{
+		//	//GoToPuzzle2();
+		//}		
+		//if (InPuzzle3)
+		//{
+		//	//GoToPuzzle();
+		//}
+
+
+		//Trigger puzzle1
+		FString TriggerPuzzle1 = "TriggerPuzzle1";
+		const FString& TriggerPuzzle1Ref = TriggerPuzzle1;
+		bool isTriggerPuzzle1 = MessageString.Equals(TriggerPuzzle1Ref);
+
+		//For Debugging
+		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Bool: %s"), isTriggerPuzzle1 ? TEXT("true") : TEXT("false")));
+
+		if (isTriggerPuzzle1)
+		{
+			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I will now trigger puzzle1 yea");
+			//TriggerPuzzle1event();
+			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I triggered puzzle1 uwu");
+		}
+
+		////Trigger puzzle2
+		//FString Trigger2 = "Trigger2";
+		//const FString& Trigger2Ref = Trigger2;
+		//bool isTrigger2 = MessageString.Equals(Trigger2Ref);
+
+		////Trigger puzzle3
+		//FString Trigger3 = "Trigger3";
+		//const FString& Trigger3Ref = Trigger3;
+		//bool isTrigger3 = MessageString.Equals(Trigger3Ref);
+
+	});
 
 	// Sending message
 	WebSocket->OnMessageSent().AddLambda([](const FString& MessageString) {
@@ -72,3 +134,4 @@ FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
 
 	return OutputText = *MessageRecived;
 }
+
