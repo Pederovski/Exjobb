@@ -31,12 +31,18 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(exectestDelegate);
+	DECLARE_FUNCTION(execGoToControlRoom); \
+	DECLARE_FUNCTION(execGoToPuzzle3); \
+	DECLARE_FUNCTION(execGoToPuzzle2); \
+	DECLARE_FUNCTION(execGoToPuzzle1);
 
 
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(exectestDelegate);
+	DECLARE_FUNCTION(execGoToControlRoom); \
+	DECLARE_FUNCTION(execGoToPuzzle3); \
+	DECLARE_FUNCTION(execGoToPuzzle2); \
+	DECLARE_FUNCTION(execGoToPuzzle1);
 
 
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS \

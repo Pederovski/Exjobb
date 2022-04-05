@@ -29,9 +29,7 @@ void UWebSocketGameInstance::Init() {
 
 	// Receiving message
 	WebSocket->OnMessage().AddLambda([this](const FString& MessageString) {
-		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Received message: " + MessageString);
-
-	
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, MessageString);
 
 		//Check if we are in puzzle1
 		FString Trigger1 = "Trigger1";
@@ -48,31 +46,43 @@ void UWebSocketGameInstance::Init() {
 		const FString& Trigger3Ref = Trigger3;
 		bool isTrigger3 = MessageString.Equals(Trigger3Ref);
 
+		//Check if we are in control room
+		FString controlRoom = "ControlRoom";
+		const FString& controlRoomRef = controlRoom;
+		bool iscontrolRoom = MessageString.Equals(controlRoomRef);
+
 		if (isTrigger1) {
 			InControlRoom = false;
 			InPuzzle1 = true;
-			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Going to puzzle1");
-			//GoToPuzzle1();
-			testDelegate();
-			int anInt = OnUsed();
-			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, FString::FromInt(anInt));
-
+			GoToPuzzle1();
 			OutputText = "Im in puzzle1 woho :)";
 		}
 
 		if (isTrigger2) {
 			InControlRoom = false;
 			InPuzzle2 = true;
-
+			GoToPuzzle2();
 			OutputText = "Im in puzzle2 woho :)";
 		}
 
 		if (isTrigger3) {
 			InControlRoom = false;
 			InPuzzle3 = true;
-
+			GoToPuzzle3();
 			OutputText = "Im in puzzle3 woho :)";
 		}
+
+		if (iscontrolRoom) {
+			InControlRoom = true;
+			InPuzzle1 = false;
+			InPuzzle2 = false;
+			InPuzzle3 = false;
+
+			GoToControlRoom();
+			OutputText = "Im in control room woho :)";
+		}
+
+
 
 		//Go to correct room
 		//if (InControlRoom)
@@ -144,16 +154,30 @@ int UWebSocketGameInstance::OnUsed_Implementation()
 	return 2;
 }
 
-void UWebSocketGameInstance::testDelegate()
+void UWebSocketGameInstance::GoToPuzzle1()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("before delegate2!"));
 
-	MyDelegate.Broadcast(69, 420);
+	DelegatePuzzle1.Broadcast(69, 420);
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("After delegate2!"));
 
 }
 
+void UWebSocketGameInstance::GoToPuzzle2()
+{
+	DelegatePuzzle2.Broadcast(69, 420);
+}
+
+void UWebSocketGameInstance::GoToPuzzle3()
+{
+	DelegatePuzzle3.Broadcast(69, 420);
+}
+
+void UWebSocketGameInstance::GoToControlRoom()
+{
+	ControlRoom.Broadcast(69, 420);
+}
 
 //FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
 //

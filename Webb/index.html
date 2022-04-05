@@ -24,6 +24,13 @@
         <br><br><br><br>
         <div class="puzzle2exit"><a href="exit.html">EXIT</a></div>
     </section>
-    <script src="app.js"></script>
+    <script src="app.js">
+        console.log("Entered Control Room script\n");
+        var socket = new WebSocket('ws://localhost:5500');
+        socket.onopen = function(event) {
+            console.log('Connection open in Control Room');
+            socket.send('ControlRoom');
+        }
+    </script>
 </body>
 </html>

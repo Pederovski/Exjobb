@@ -20,10 +20,28 @@ class MYPROJECT_API UWebSocketGameInstance : public UGameInstance
 public:
 
 	UPROPERTY(BlueprintAssignable)
-		FNewTypeDelegae MyDelegate;
+		FNewTypeDelegae DelegatePuzzle1;
+
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegatePuzzle2;
+
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegatePuzzle3;
+
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae ControlRoom;
 
 	UFUNCTION(BlueprintCallable)
-		void testDelegate();
+		void GoToPuzzle1();
+
+	UFUNCTION(BlueprintCallable)
+		void GoToPuzzle2();
+
+	UFUNCTION(BlueprintCallable)
+		void GoToPuzzle3();
+
+	UFUNCTION(BlueprintCallable)
+		void GoToControlRoom();
 
 	//UFUNCTION(BlueprintImplementableEvent)
 	//void TriggerPuzzle1event();
