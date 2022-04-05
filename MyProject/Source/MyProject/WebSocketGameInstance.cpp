@@ -29,7 +29,9 @@ void UWebSocketGameInstance::Init() {
 
 	// Receiving message
 	WebSocket->OnMessage().AddLambda([this](const FString& MessageString) {
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Received message: " + MessageString);
+		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Received message: " + MessageString);
+
+	
 
 		//Check if we are in puzzle1
 		FString Trigger1 = "Trigger1";
@@ -49,7 +51,12 @@ void UWebSocketGameInstance::Init() {
 		if (isTrigger1) {
 			InControlRoom = false;
 			InPuzzle1 = true;
-			GoToPuzzle1();
+			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, "Going to puzzle1");
+			//GoToPuzzle1();
+			testDelegate();
+			int anInt = OnUsed();
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Cyan, FString::FromInt(anInt));
+
 			OutputText = "Im in puzzle1 woho :)";
 		}
 
@@ -116,7 +123,7 @@ void UWebSocketGameInstance::Init() {
 	// Sending message
 	WebSocket->OnMessageSent().AddLambda([](const FString& MessageString) {
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Magenta, "Sent message: " + MessageString);
-		});
+	});
 
 	WebSocket->Connect();
 }
@@ -130,8 +137,26 @@ void UWebSocketGameInstance::Shutdown() {
 	Super::Shutdown();
 }
 
-FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
+int UWebSocketGameInstance::OnUsed_Implementation()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
 
-	return OutputText = *MessageRecived;
+	return 2;
 }
+
+void UWebSocketGameInstance::testDelegate()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("before delegate2!"));
+
+	MyDelegate.Broadcast(69, 420);
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("After delegate2!"));
+
+}
+
+
+//FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
+//
+//	return OutputText = *MessageRecived;
+//}
 

@@ -13,10 +13,45 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MYPROJECT_WebSocketGameInstance_generated_h
 
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_10_DELEGATE \
+struct _Script_MyProject_eventNewTypeDelegae_Parms \
+{ \
+	int32 number; \
+	int32 number2; \
+}; \
+static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegate& NewTypeDelegae, int32 number, int32 number2) \
+{ \
+	_Script_MyProject_eventNewTypeDelegae_Parms Parms; \
+	Parms.number=number; \
+	Parms.number2=number2; \
+	NewTypeDelegae.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(exectestDelegate);
+
+
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(exectestDelegate);
+
+
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS \
+	struct WebSocketGameInstance_eventOnUsed_Parms \
+	{ \
+		int32 ReturnValue; \
+ \
+		/** Constructor, initializes return property only **/ \
+		WebSocketGameInstance_eventOnUsed_Parms() \
+			: ReturnValue(0) \
+		{ \
+		} \
+	};
+
+
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS_NO_PURE_DECLS \
 private: \
