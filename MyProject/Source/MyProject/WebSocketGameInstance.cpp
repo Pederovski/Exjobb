@@ -82,51 +82,36 @@ void UWebSocketGameInstance::Init() {
 			OutputText = "Im in control room woho :)";
 		}
 
-
-
-		//Go to correct room
-		//if (InControlRoom)
-		//{
-		//	//GoToControlRoom();
-		//}
-		//if (InPuzzle1)
-		//{
-		//	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I will now go to puzzle1");
-		//}		
-		//if (InPuzzle2)
-		//{
-		//	//GoToPuzzle2();
-		//}		
-		//if (InPuzzle3)
-		//{
-		//	//GoToPuzzle();
-		//}
-
-
+		//Check if player triggers puzzles below
 		//Trigger puzzle1
 		FString TriggerPuzzle1 = "TriggerPuzzle1";
 		const FString& TriggerPuzzle1Ref = TriggerPuzzle1;
 		bool isTriggerPuzzle1 = MessageString.Equals(TriggerPuzzle1Ref);
 
-		//For Debugging
-		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Bool: %s"), isTriggerPuzzle1 ? TEXT("true") : TEXT("false")));
-
 		if (isTriggerPuzzle1)
 		{
-			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I will now trigger puzzle1 yea");
-			//TriggerPuzzle1event();
-			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "I triggered puzzle1 uwu");
+			TriggerPuzzle1event();
 		}
 
-		////Trigger puzzle2
-		//FString Trigger2 = "Trigger2";
-		//const FString& Trigger2Ref = Trigger2;
-		//bool isTrigger2 = MessageString.Equals(Trigger2Ref);
+		//Trigger puzzle2
+		FString TriggerPuzzle2 = "TriggerPuzzle2";
+		const FString& TriggerPuzzle2Ref = TriggerPuzzle2;
+		bool isTriggerPuzzle2 = MessageString.Equals(TriggerPuzzle2Ref);
 
-		////Trigger puzzle3
-		//FString Trigger3 = "Trigger3";
-		//const FString& Trigger3Ref = Trigger3;
-		//bool isTrigger3 = MessageString.Equals(Trigger3Ref);
+		if (isTriggerPuzzle2)
+		{
+			TriggerPuzzle2event();
+		}
+		
+		//Trigger puzzle3
+		FString TriggerPuzzle3 = "TriggerPuzzle3";
+		const FString& TriggerPuzzle3Ref = TriggerPuzzle3;
+		bool isTriggerPuzzle3 = MessageString.Equals(TriggerPuzzle3Ref);
+
+		if (isTriggerPuzzle3)
+		{
+			TriggerPuzzle3event();
+		}
 
 	});
 
@@ -179,6 +164,20 @@ void UWebSocketGameInstance::GoToControlRoom()
 	ControlRoom.Broadcast(69, 420);
 }
 
+void UWebSocketGameInstance::TriggerPuzzle1event()
+{
+	DelegateTriggerPuzzle1.Broadcast(69, 420);
+}
+
+void UWebSocketGameInstance::TriggerPuzzle2event()
+{
+	DelegateTriggerPuzzle2.Broadcast(69, 420);
+}
+
+void UWebSocketGameInstance::TriggerPuzzle3event()
+{
+	DelegateTriggerPuzzle3.Broadcast(69, 420);
+}
 //FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
 //
 //	return OutputText = *MessageRecived;

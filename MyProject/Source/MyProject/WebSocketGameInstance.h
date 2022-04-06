@@ -19,40 +19,37 @@ class MYPROJECT_API UWebSocketGameInstance : public UGameInstance
 
 public:
 
+	//Delegates for triggering events in blueprint
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae DelegatePuzzle1;
-
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae DelegatePuzzle2;
-
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae DelegatePuzzle3;
-
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae ControlRoom;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateTriggerPuzzle1;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateTriggerPuzzle2;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateTriggerPuzzle3;
 
+	//Functions that call the above delegates
 	UFUNCTION(BlueprintCallable)
 		void GoToPuzzle1();
-
 	UFUNCTION(BlueprintCallable)
 		void GoToPuzzle2();
-
 	UFUNCTION(BlueprintCallable)
 		void GoToPuzzle3();
-
 	UFUNCTION(BlueprintCallable)
 		void GoToControlRoom();
-
-	//UFUNCTION(BlueprintImplementableEvent)
-	//void TriggerPuzzle1event();
-	//UFUNCTION(BlueprintImplementableEvent)
-	//void GoToControlRoom();
-	//UFUNCTION(BlueprintImplementableEvent)
-	//void GoToPuzzle1();
-	//UFUNCTION(BlueprintImplementableEvent)
-	//void GoToPuzzle2();
-	//UFUNCTION(BlueprintImplementableEvent)
-	//void GoToPuzzle();
+	UFUNCTION(BlueprintCallable)
+		void TriggerPuzzle1event();
+	UFUNCTION(BlueprintCallable)
+		void TriggerPuzzle2event();
+	UFUNCTION(BlueprintCallable)
+		void TriggerPuzzle3event();
 
 	UFUNCTION(BlueprintImplementableEvent)
 	int OnUsed();

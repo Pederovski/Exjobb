@@ -55,6 +55,27 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 		}
 		return ReturnFunction;
 	}
+	DEFINE_FUNCTION(UWebSocketGameInstance::execTriggerPuzzle3event)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TriggerPuzzle3event();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UWebSocketGameInstance::execTriggerPuzzle2event)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TriggerPuzzle2event();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UWebSocketGameInstance::execTriggerPuzzle1event)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TriggerPuzzle1event();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UWebSocketGameInstance::execGoToControlRoom)
 	{
 		P_FINISH;
@@ -98,6 +119,9 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 			{ "GoToPuzzle1", &UWebSocketGameInstance::execGoToPuzzle1 },
 			{ "GoToPuzzle2", &UWebSocketGameInstance::execGoToPuzzle2 },
 			{ "GoToPuzzle3", &UWebSocketGameInstance::execGoToPuzzle3 },
+			{ "TriggerPuzzle1event", &UWebSocketGameInstance::execTriggerPuzzle1event },
+			{ "TriggerPuzzle2event", &UWebSocketGameInstance::execTriggerPuzzle2event },
+			{ "TriggerPuzzle3event", &UWebSocketGameInstance::execTriggerPuzzle3event },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -132,7 +156,9 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Functions that call the above delegates\n" },
 		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+		{ "ToolTip", "Functions that call the above delegates" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWebSocketGameInstance, nullptr, "GoToPuzzle1", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1_Statics::Function_MetaDataParams)) };
@@ -204,9 +230,7 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//UFUNCTION(BlueprintImplementableEvent)\n//void TriggerPuzzle1event();\n//UFUNCTION(BlueprintImplementableEvent)\n//void GoToControlRoom();\n//UFUNCTION(BlueprintImplementableEvent)\n//void GoToPuzzle1();\n//UFUNCTION(BlueprintImplementableEvent)\n//void GoToPuzzle2();\n//UFUNCTION(BlueprintImplementableEvent)\n//void GoToPuzzle();\n" },
 		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
-		{ "ToolTip", "UFUNCTION(BlueprintImplementableEvent)\nvoid TriggerPuzzle1event();\nUFUNCTION(BlueprintImplementableEvent)\nvoid GoToControlRoom();\nUFUNCTION(BlueprintImplementableEvent)\nvoid GoToPuzzle1();\nUFUNCTION(BlueprintImplementableEvent)\nvoid GoToPuzzle2();\nUFUNCTION(BlueprintImplementableEvent)\nvoid GoToPuzzle();" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWebSocketGameInstance, nullptr, "OnUsed", nullptr, nullptr, sizeof(WebSocketGameInstance_eventOnUsed_Parms), Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::Function_MetaDataParams)) };
@@ -216,6 +240,72 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWebSocketGameInstance_OnUsed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWebSocketGameInstance, nullptr, "TriggerPuzzle1event", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWebSocketGameInstance, nullptr, "TriggerPuzzle2event", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWebSocketGameInstance, nullptr, "TriggerPuzzle3event", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -247,6 +337,18 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 #endif
 		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_ControlRoom;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DelegateTriggerPuzzle1_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_DelegateTriggerPuzzle1;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DelegateTriggerPuzzle2_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_DelegateTriggerPuzzle2;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DelegateTriggerPuzzle3_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_DelegateTriggerPuzzle3;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OutputText_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_OutputText;
@@ -260,10 +362,13 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWebSocketGameInstance_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWebSocketGameInstance_GoToControlRoom, "GoToControlRoom" }, // 2219095360
-		{ &Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1, "GoToPuzzle1" }, // 3411850468
+		{ &Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle1, "GoToPuzzle1" }, // 1412956364
 		{ &Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle2, "GoToPuzzle2" }, // 3336834293
 		{ &Z_Construct_UFunction_UWebSocketGameInstance_GoToPuzzle3, "GoToPuzzle3" }, // 4060296386
-		{ &Z_Construct_UFunction_UWebSocketGameInstance_OnUsed, "OnUsed" }, // 1771609079
+		{ &Z_Construct_UFunction_UWebSocketGameInstance_OnUsed, "OnUsed" }, // 2940202701
+		{ &Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle1event, "TriggerPuzzle1event" }, // 655473124
+		{ &Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle2event, "TriggerPuzzle2event" }, // 2089315469
+		{ &Z_Construct_UFunction_UWebSocketGameInstance_TriggerPuzzle3event, "TriggerPuzzle3event" }, // 1695291189
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::Class_MetaDataParams[] = {
@@ -274,7 +379,9 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle1_MetaData[] = {
+		{ "Comment", "//Delegates for triggering events in blueprint\n" },
 		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+		{ "ToolTip", "Delegates for triggering events in blueprint" },
 	};
 #endif
 	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle1 = { "DelegatePuzzle1", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWebSocketGameInstance, DelegatePuzzle1), Z_Construct_UDelegateFunction_MyProject_NewTypeDelegae__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle1_MetaData)) };
@@ -297,6 +404,24 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 #endif
 	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_ControlRoom = { "ControlRoom", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWebSocketGameInstance, ControlRoom), Z_Construct_UDelegateFunction_MyProject_NewTypeDelegae__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_ControlRoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_ControlRoom_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle1_MetaData[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle1 = { "DelegateTriggerPuzzle1", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWebSocketGameInstance, DelegateTriggerPuzzle1), Z_Construct_UDelegateFunction_MyProject_NewTypeDelegae__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle1_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle2_MetaData[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle2 = { "DelegateTriggerPuzzle2", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWebSocketGameInstance, DelegateTriggerPuzzle2), Z_Construct_UDelegateFunction_MyProject_NewTypeDelegae__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle2_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle2_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle3_MetaData[] = {
+		{ "ModuleRelativePath", "WebSocketGameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle3 = { "DelegateTriggerPuzzle3", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWebSocketGameInstance, DelegateTriggerPuzzle3), Z_Construct_UDelegateFunction_MyProject_NewTypeDelegae__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle3_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle3_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_OutputText_MetaData[] = {
 		{ "AllowPrivateAccess", "True" },
 		{ "Category", "WebSocketGameInstance" },
@@ -309,6 +434,9 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle2,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegatePuzzle3,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_ControlRoom,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle1,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle2,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_DelegateTriggerPuzzle3,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWebSocketGameInstance_Statics::NewProp_OutputText,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWebSocketGameInstance_Statics::StaticCppClassTypeInfo = {
@@ -338,7 +466,7 @@ void EmptyLinkFunctionForGeneratedCodeWebSocketGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWebSocketGameInstance, 3349280161);
+	IMPLEMENT_CLASS(UWebSocketGameInstance, 3079144832);
 	template<> MYPROJECT_API UClass* StaticClass<UWebSocketGameInstance>()
 	{
 		return UWebSocketGameInstance::StaticClass();
