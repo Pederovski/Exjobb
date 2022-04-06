@@ -17,7 +17,6 @@ const http = require('http');
 const fs = require('fs');
 var path = require('path');
 
-
 let connection = null;
 
 const httpserver = http.createServer(function(request, response) {
@@ -94,16 +93,12 @@ webSocketServer.on('connection', (webSocketConnection) => {
   webSocketConnection.on('message', (message) => {
     console.log('Received message from WebSocket client: %s.', message);
 
-    wsConnection.send(message);
+    wsConnection.send("Sending from server:" + message);
   });
 
   webSocketConnection.send(`Hello, this is server speaking!`);
 
 });
-
-const open = require('open');
-open('http://localhost:3000/index.html', {app:'chrome'});
-
 
 // ---------------------------------------------------------------------
 // ----- CODE GRAVEYARD ------------------------------------------------

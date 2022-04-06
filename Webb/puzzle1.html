@@ -7,17 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 
-<!--What the user interacts with-->
+<!-- What the user interacts with -->
 <body class="puzzlebody">
-    <h1>Escape Room Demo Page</h1>
+    <h1>ESCAPE THE DECISION ARENA</h1>
 
-    <h3>PUZZLE 1 ROOM</h3>
+    <h3>PUZZLE 1</h3>
 
     <!-- Input code -->
     <section class="inputcode">
         <div class="triggerPuzzle">
             <br>
-                <button type="button" id="triggerpuzzle1button" onclick="triggerPuzzle1()">Trigger</button>
+                <button type="button" class="triggerButton" id="triggerpuzzle1button" onclick="triggerPuzzle1()">Trigger</button>
             <br><br><br>
         </div>
         <div>
@@ -33,22 +33,35 @@
         var socket = new WebSocket('ws://localhost:5500');
         socket.onopen = function(event) {
             console.log('Connection open in Puzzle1');
+            // Send signal to Unreal to change camera view
             socket.send('Trigger1');
         }
         // Send signal to Unreal to trigger puzzle
         function triggerPuzzle1() {
             console.log("Trigger puzzle 1");
             socket.send("TriggerPuzzle1");
+
+            // Disable button for a few seconds after clicking
+            const trigButton = document.getElementById('triggerpuzzle1button');
+            trigButton.disabled = true;
+            setTimeout(function() {
+            trigButton.disabled = false;
+            }, 5000);
         }
         // Send puzzle input to Unreal
         function submitPuzzle1() {
+            // Save puzzle input & send to Unreal via WebSocket
             var puzzle1 = document.getElementById('puzzle1input').value;
             console.log(puzzle1);
             socket.send(puzzle1);
+
+            // Clear input field after submit
+            document.getElementById('puzzle1input').value = '';
         }
     </script>
+    <br><br><br><br>
+    <section>
+        <div class="puzzleroomexit"><a href="controlRoom.html">BACK</a></div>
+    </section>
 </body>
-<section>
-    <div class="puzzleroomexit"><a href="index.html">Back to control room</a></div>
-</section>
 </html>

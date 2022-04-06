@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!-- Header = Not what the user interacts with -->
+<head>
+    <title>Control Room</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<!--What the user interacts with-->
+<body>
+    <h1>ESCAPE THE DECISION ARENA</h1>
+    <h3>CONTROL ROOM</h3>
+    <br><br>
+
+    <!-- Links to puzzles goes here -->
+    <section class="mainbody">
+        <div class="puzzle2exit"><a href="puzzle2.html">PUZZLE 2</a></div>
+        <br><br><br><br>
+        <section class="middlebody">
+            <div class="puzzle13"><a href="puzzle1.html">PUZZLE 1</a></div>
+            <div class="puzzle13"><a href="puzzle3.html">PUZZLE 3</a></div>
+        </section>
+        <br><br><br><br>
+        <div class="puzzle2exit"><a href="exit.html">EXIT</a></div>
+    </section>
+    <script>
+        console.log("Entered ControlRoom script\n");
+        var socket = new WebSocket('ws://localhost:5500');
+        socket.onopen = function(event) {
+            console.log('Connection open in ControlRoom');
+            // Send signal to Unreal to change camera view
+            socket.send('ControlRoom');
+        }
+    </script>
+</body>
+</html>
