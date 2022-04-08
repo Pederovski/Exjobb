@@ -93,13 +93,15 @@ webSocketServer.on('connection', (webSocketConnection) => {
   webSocketConnection.on('message', (message) => {
     console.log('Received message from WebSocket client: %s.', message);
 
-    wsConnection.send("Sending from server:" + message);
+    wsConnection.send(message);
   });
 
   webSocketConnection.send(`Hello, this is server speaking!`);
 
 });
 
+const open = require('open');
+open('http://localhost:3000/index.html', {app:'chrome'});
 // ---------------------------------------------------------------------
 // ----- CODE GRAVEYARD ------------------------------------------------
 

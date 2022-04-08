@@ -17,13 +17,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct _Script_MyProject_eventNewTypeDelegae_Parms \
 { \
 	int32 number; \
-	int32 number2; \
+	FString code; \
 }; \
-static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegate& NewTypeDelegae, int32 number, int32 number2) \
+static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegate& NewTypeDelegae, int32 number, const FString& code) \
 { \
 	_Script_MyProject_eventNewTypeDelegae_Parms Parms; \
 	Parms.number=number; \
-	Parms.number2=number2; \
+	Parms.code=code; \
 	NewTypeDelegae.ProcessMulticastDelegate<UObject>(&Parms); \
 }
 
@@ -31,6 +31,9 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle3); \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle2); \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle1); \
 	DECLARE_FUNCTION(execTriggerPuzzle3event); \
 	DECLARE_FUNCTION(execTriggerPuzzle2event); \
 	DECLARE_FUNCTION(execTriggerPuzzle1event); \
@@ -42,6 +45,9 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle3); \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle2); \
+	DECLARE_FUNCTION(execSendPlayerInputPuzzle1); \
 	DECLARE_FUNCTION(execTriggerPuzzle3event); \
 	DECLARE_FUNCTION(execTriggerPuzzle2event); \
 	DECLARE_FUNCTION(execTriggerPuzzle1event); \
@@ -51,20 +57,6 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 	DECLARE_FUNCTION(execGoToPuzzle1);
 
 
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS \
-	struct WebSocketGameInstance_eventOnUsed_Parms \
-	{ \
-		int32 ReturnValue; \
- \
-		/** Constructor, initializes return property only **/ \
-		WebSocketGameInstance_eventOnUsed_Parms() \
-			: ReturnValue(0) \
-		{ \
-		} \
-	};
-
-
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWebSocketGameInstance(); \
@@ -113,17 +105,13 @@ public: \
 	FORCEINLINE static uint32 __PPO__OutputText() { return STRUCT_OFFSET(UWebSocketGameInstance, OutputText); }
 
 
-#define MyProject_Source_MyProject_WebSocketGameInstance_h_14_PROLOG \
-	MyProject_Source_MyProject_WebSocketGameInstance_h_17_EVENT_PARMS
-
-
+#define MyProject_Source_MyProject_WebSocketGameInstance_h_14_PROLOG
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_PRIVATE_PROPERTY_OFFSET \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
-	MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_STANDARD_CONSTRUCTORS \
 public: \
@@ -136,7 +124,6 @@ public: \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_PRIVATE_PROPERTY_OFFSET \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	MyProject_Source_MyProject_WebSocketGameInstance_h_17_CALLBACK_WRAPPERS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_INCLASS_NO_PURE_DECLS \
 	MyProject_Source_MyProject_WebSocketGameInstance_h_17_ENHANCED_CONSTRUCTORS \
 private: \

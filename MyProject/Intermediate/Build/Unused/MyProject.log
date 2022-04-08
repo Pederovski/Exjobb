@@ -1,17 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Peder\Desktop\Exjobb\Exjobb).
-  Parsing headers for MyProjectEditor
-    Running UnrealHeaderTool "C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\MyProject.uproject" "C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\MyProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Peder\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for MyProjectEditor in 12,9452526 seconds
   Building MyProjectEditor...
   Using Visual Studio 2019 14.29.30133 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 5 actions with 4 processes...
-    [1/5] WebSocketGameInstance.gen.cpp
-    [2/5] WebSocketGameInstance.cpp
-    [3/5] UE4Editor-MyProject-0142.lib
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0142.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0142.exp
-    [4/5] UE4Editor-MyProject-0142.dll
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0142.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0142.suppressed.exp
-    [5/5] MyProjectEditor.target
-  Total time in Parallel executor: 20,58 seconds
-  Total execution time: 35,13 seconds
+  Building 4 actions with 4 processes...
+    [1/4] WebSocketGameInstance.cpp
+    [2/4] UE4Editor-MyProject-0157.lib
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.exp
+    [3/4] UE4Editor-MyProject-0157.dll
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.suppressed.exp
+    [4/4] MyProjectEditor.target
+  Total time in Parallel executor: 33,28 seconds
+  Total execution time: 34,70 seconds

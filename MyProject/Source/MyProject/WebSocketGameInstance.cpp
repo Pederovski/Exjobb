@@ -29,7 +29,7 @@ void UWebSocketGameInstance::Init() {
 
 	// Receiving message
 	WebSocket->OnMessage().AddLambda([this](const FString& MessageString) {
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, MessageString);
+		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, MessageString);
 
 		//Check if we are in puzzle1
 		FString Trigger1 = "Trigger1";
@@ -88,30 +88,49 @@ void UWebSocketGameInstance::Init() {
 		const FString& TriggerPuzzle1Ref = TriggerPuzzle1;
 		bool isTriggerPuzzle1 = MessageString.Equals(TriggerPuzzle1Ref);
 
-		if (isTriggerPuzzle1)
-		{
-			TriggerPuzzle1event();
-		}
-
 		//Trigger puzzle2
 		FString TriggerPuzzle2 = "TriggerPuzzle2";
 		const FString& TriggerPuzzle2Ref = TriggerPuzzle2;
 		bool isTriggerPuzzle2 = MessageString.Equals(TriggerPuzzle2Ref);
-
-		if (isTriggerPuzzle2)
-		{
-			TriggerPuzzle2event();
-		}
 		
 		//Trigger puzzle3
 		FString TriggerPuzzle3 = "TriggerPuzzle3";
 		const FString& TriggerPuzzle3Ref = TriggerPuzzle3;
 		bool isTriggerPuzzle3 = MessageString.Equals(TriggerPuzzle3Ref);
+		
+		if (isTriggerPuzzle1)
+		{
+			TriggerPuzzle1event();
+		}
+
+		if (isTriggerPuzzle2)
+		{
+			TriggerPuzzle2event();
+		}
 
 		if (isTriggerPuzzle3)
 		{
 			TriggerPuzzle3event();
 		}
+
+		//Check if the player sent a sequence of integes by
+		//checking if server message is convertable to integers
+
+		if (MessageString.IsNumeric())
+		{
+			int code = FCString::Atoi(*MessageString);
+			
+			if (InPuzzle1)
+				SendPlayerInputPuzzle1(MessageString);
+			if (InPuzzle2)
+				SendPlayerInputPuzzle2(MessageString);
+			if (InPuzzle3)
+				SendPlayerInputPuzzle3(MessageString);
+		}
+
+
+		//If(convertable)
+		//send the entered code to level blueprint and compare
 
 	});
 
@@ -132,54 +151,52 @@ void UWebSocketGameInstance::Shutdown() {
 	Super::Shutdown();
 }
 
-int UWebSocketGameInstance::OnUsed_Implementation()
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
-
-	return 2;
-}
-
 void UWebSocketGameInstance::GoToPuzzle1()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("before delegate2!"));
-
-	DelegatePuzzle1.Broadcast(69, 420);
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("After delegate2!"));
-
+	DelegatePuzzle1.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::GoToPuzzle2()
 {
-	DelegatePuzzle2.Broadcast(69, 420);
+	DelegatePuzzle2.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::GoToPuzzle3()
 {
-	DelegatePuzzle3.Broadcast(69, 420);
+	DelegatePuzzle3.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::GoToControlRoom()
 {
-	ControlRoom.Broadcast(69, 420);
+	ControlRoom.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::TriggerPuzzle1event()
 {
-	DelegateTriggerPuzzle1.Broadcast(69, 420);
+	DelegateTriggerPuzzle1.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::TriggerPuzzle2event()
 {
-	DelegateTriggerPuzzle2.Broadcast(69, 420);
+	DelegateTriggerPuzzle2.Broadcast(69, "");
 }
 
 void UWebSocketGameInstance::TriggerPuzzle3event()
 {
-	DelegateTriggerPuzzle3.Broadcast(69, 420);
+	DelegateTriggerPuzzle3.Broadcast(69, "");
 }
-//FString UWebSocketGameInstance::getMessage(const FString* MessageRecived) {
-//
-//	return OutputText = *MessageRecived;
-//}
 
+void UWebSocketGameInstance::SendPlayerInputPuzzle1(FString text)
+{
+	DelegateSendPlayerInputPuzzle1.Broadcast(420, text);
+}
+
+void UWebSocketGameInstance::SendPlayerInputPuzzle2(FString text)
+{
+	DelegateSendPlayerInputPuzzle2.Broadcast(420, text);
+}
+
+void UWebSocketGameInstance::SendPlayerInputPuzzle3(FString text)
+{
+	DelegateSendPlayerInputPuzzle3.Broadcast(420, text);
+}

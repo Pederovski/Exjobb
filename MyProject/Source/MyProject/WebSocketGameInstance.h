@@ -7,7 +7,7 @@
 #include "IWebSocket.h"
 #include "WebSocketGameInstance.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FNewTypeDelegae, int, number, int, number2);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FNewTypeDelegae, int, number, FString, code);
 /**
  * 
  */
@@ -34,6 +34,12 @@ public:
 		FNewTypeDelegae DelegateTriggerPuzzle2;
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae DelegateTriggerPuzzle3;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateSendPlayerInputPuzzle1;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateSendPlayerInputPuzzle2;
+	UPROPERTY(BlueprintAssignable)
+		FNewTypeDelegae DelegateSendPlayerInputPuzzle3;
 
 	//Functions that call the above delegates
 	UFUNCTION(BlueprintCallable)
@@ -50,14 +56,15 @@ public:
 		void TriggerPuzzle2event();
 	UFUNCTION(BlueprintCallable)
 		void TriggerPuzzle3event();
-
-	UFUNCTION(BlueprintImplementableEvent)
-	int OnUsed();
+	UFUNCTION(BlueprintCallable)
+		void SendPlayerInputPuzzle1(FString text);
+	UFUNCTION(BlueprintCallable)
+		void SendPlayerInputPuzzle2(FString text);
+	UFUNCTION(BlueprintCallable)
+		void SendPlayerInputPuzzle3(FString text);
 
 	virtual void Init() override;
 	virtual void Shutdown() override;
-
-	//FString getMessage(const FString* MessageRecived);
 
 	TSharedPtr<IWebSocket> WebSocket;
 
@@ -70,9 +77,4 @@ private:
 	bool InPuzzle1 = false;
 	bool InPuzzle2 = false;
 	bool InPuzzle3 = false;
-
-protected:
-
-	virtual int OnUsed_Implementation();
-
 };

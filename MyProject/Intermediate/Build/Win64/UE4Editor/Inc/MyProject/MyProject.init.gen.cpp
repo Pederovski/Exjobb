@@ -27,7 +27,7 @@ void EmptyLinkFunctionForGeneratedCodeMyProject_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x99B06931,
+				0x7C97E967,
 				0xD9911062,
 				METADATA_PARAMS(nullptr, 0)
 			};
