@@ -97,11 +97,11 @@ webSocketServer.on('connection', (webSocketConnection) => {
   });
 
   webSocketConnection.send(`Hello, this is server speaking!`);
-
 });
 
 const open = require('open');
 open('http://localhost:3000/index.html', {app:'chrome'});
+
 // ---------------------------------------------------------------------
 // ----- CODE GRAVEYARD ------------------------------------------------
 

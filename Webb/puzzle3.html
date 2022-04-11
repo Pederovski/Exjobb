@@ -20,13 +20,11 @@
                 <button type="button" class="triggerButton" id="triggerpuzzle3button" onclick="triggerPuzzle3()">Trigger</button>
             <br><br><br>
         </div>
-        <form>
+        <form autocomplete="off">
             <div>
-                <input id="puzzle3input1">
+                <input id="puzzle3input1" type ="number">
                 <br>
-                <input id="puzzle3input2">
-                <br>
-                <input id="puzzle3input3">
+                <input id="puzzle3input2" type ="number">
             </div>
             <div>
                 <button type="button" id="puzzle3button" onclick="submitPuzzle3()">Check</button>
@@ -52,19 +50,54 @@
             setTimeout(function() {
             trigButton.disabled = false;
             }, 5000);
+
+            // Generate a random number
+            function generateNumber() {
+                let rand = Math.random() * 8; // Generates random number between 0-7 w. decimals
+                //console.log(rand); 
+                rand = Math.floor(rand); // Removes decimals (avrundar nedåt)
+                //console.log(rand);
+                return rand;
+            }
+            // Create two time code sequences "hhmm"
+            // where hh = [00, 23] & mm = [00, 55]
+            // all random numbers, where seq1 != seq2
+            const n = 3;
+            let highPitch = [];
+            let lowPitch = [];
+            let isSame = true;
+            let temp;
+            for(var index = 0; index < n; index++) {
+                //console.log(generateNumber());
+                highPitch[index] = generateNumber();
+                while(isSame) {
+                    temp = generateNumber();
+                    if(highPitch[index] != temp) {
+                        isSame = false;
+                    }
+                }
+                lowPitch[index] = temp;
+                isSame = true;
+            }
+            //console.log("highPitch: [" + highPitch[0] + " " + highPitch[1] + " " + highPitch[2] + "]");
+            //console.log("lowPitch: [" + lowPitch[0] + " " + lowPitch[1] + " " + lowPitch[2] + "]");
+            var soundSequence = `${highPitch[0]}${highPitch[1]}${highPitch[2]}+${lowPitch[0]}${lowPitch[1]}${lowPitch[2]}`;
+            console.log(soundSequence);
+            // Send code sequence to Unreal
+            socket.send(soundSequence);
         }
         // Send puzzle input to Unreal
         function submitPuzzle3() {
             var puzzle3_1 = document.getElementById('puzzle3input1').value;
             var puzzle3_2 = document.getElementById('puzzle3input2').value;
-            var puzzle3_3 = document.getElementById('puzzle3input3').value;
-            console.log(puzzle3_1 + " " + puzzle3_2 + " " + puzzle3_3);
-            socket.send(puzzle3_1 + " " + puzzle3_2 + " " + puzzle3_3);
+            //var puzzle3_3 = document.getElementById('puzzle3input3').value;
+            console.log(puzzle3_1 + " " + puzzle3_2); //  + " " + puzzle3_3
+            socket.send(puzzle3_1 + " " + puzzle3_2); //  + " " + puzzle3_3
 
             // Clear input field after submit
             document.getElementById('puzzle3input1').value = '';
             document.getElementById('puzzle3input2').value = '';
-            document.getElementById('puzzle3input3').value = '';
+            //document.getElementById('puzzle3input3').value = '';
         }
     </script>
     <section>
