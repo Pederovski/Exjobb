@@ -54,22 +54,22 @@ void UWebSocketGameInstance::Init() {
 		if (isTrigger1) {
 			InControlRoom = false;
 			InPuzzle1 = true;
+
 			GoToPuzzle1();
-			OutputText = "Im in puzzle1 woho :)";
 		}
 
 		if (isTrigger2) {
 			InControlRoom = false;
 			InPuzzle2 = true;
+
 			GoToPuzzle2();
-			OutputText = "Im in puzzle2 woho :)";
 		}
 
 		if (isTrigger3) {
 			InControlRoom = false;
 			InPuzzle3 = true;
+
 			GoToPuzzle3();
-			OutputText = "Im in puzzle3 woho :)";
 		}
 
 		if (iscontrolRoom) {
@@ -79,7 +79,6 @@ void UWebSocketGameInstance::Init() {
 			InPuzzle3 = false;
 
 			GoToControlRoom();
-			OutputText = "Im in control room woho :)";
 		}
 
 		//Check if player triggers puzzles below
@@ -113,24 +112,30 @@ void UWebSocketGameInstance::Init() {
 			TriggerPuzzle3event();
 		}
 
-		//Check if the player sent a sequence of integes by
-		//checking if server message is convertable to integers
 
-		if (MessageString.IsNumeric())
+		if (MessageString.IsNumeric()) //Checks if messages comes from puzzle 1
 		{
-			int code = FCString::Atoi(*MessageString);
+			//int code = FCString::Atoi(*MessageString);
 			
 			if (InPuzzle1)
 				SendPlayerInputPuzzle1(MessageString);
-			if (InPuzzle2)
-				SendPlayerInputPuzzle2(MessageString);
-			if (InPuzzle3)
-				SendPlayerInputPuzzle3(MessageString);
+			//if (InPuzzle2)
+			//	SendPlayerInputPuzzle2(MessageString);
+			//if (InPuzzle3)
+			//	SendPlayerInputPuzzle3(MessageString);
 		}
-
-
-		//If(convertable)
-		//send the entered code to level blueprint and compare
+		
+		if (MessageString.Contains("+")) //Checks if messages comes from puzzle 2
+		{
+			if (InPuzzle2)
+				SendPlayerInputPuzzle2(MessageString.Replace(TEXT("+"), TEXT("")));
+		}
+		
+		if (MessageString.Contains(" ")) //Checks if messages comes from puzzle 3
+		{
+			if (InPuzzle3)
+				SendPlayerInputPuzzle3(MessageString.Replace(TEXT(" "), TEXT("")));
+		}
 
 	});
 

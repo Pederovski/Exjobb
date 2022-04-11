@@ -3,10 +3,10 @@
   Using Visual Studio 2019 14.29.30133 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 4 processes...
     [1/4] WebSocketGameInstance.cpp
-    [2/4] UE4Editor-MyProject-0157.lib
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.exp
-    [3/4] UE4Editor-MyProject-0157.dll
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0157.suppressed.exp
+    [2/4] UE4Editor-MyProject-0160.lib
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0160.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0160.exp
+    [3/4] UE4Editor-MyProject-0160.dll
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0160.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0160.suppressed.exp
     [4/4] MyProjectEditor.target
-  Total time in Parallel executor: 33,28 seconds
-  Total execution time: 34,70 seconds
+  Total time in Parallel executor: 5,28 seconds
+  Total execution time: 6,57 seconds
