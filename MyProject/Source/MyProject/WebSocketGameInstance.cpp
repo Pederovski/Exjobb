@@ -52,31 +52,31 @@ void UWebSocketGameInstance::Init() {
 		bool iscontrolRoom = MessageString.Equals(controlRoomRef);
 
 		if (isTrigger1) {
-			InControlRoom = false;
-			InPuzzle1 = true;
+			//InControlRoom = false;
+			//InPuzzle1 = true;
 
 			GoToPuzzle1();
 		}
 
 		if (isTrigger2) {
-			InControlRoom = false;
-			InPuzzle2 = true;
+			//InControlRoom = false;
+			//InPuzzle2 = true;
 
 			GoToPuzzle2();
 		}
 
 		if (isTrigger3) {
-			InControlRoom = false;
-			InPuzzle3 = true;
+			//InControlRoom = false;
+			//InPuzzle3 = true;
 
 			GoToPuzzle3();
 		}
 
 		if (iscontrolRoom) {
-			InControlRoom = true;
-			InPuzzle1 = false;
-			InPuzzle2 = false;
-			InPuzzle3 = false;
+			//InControlRoom = true;
+			//InPuzzle1 = false;
+			//InPuzzle2 = false;
+			//InPuzzle3 = false;
 
 			GoToControlRoom();
 		}
@@ -112,29 +112,22 @@ void UWebSocketGameInstance::Init() {
 			TriggerPuzzle3event();
 		}
 
-
 		if (MessageString.IsNumeric()) //Checks if messages comes from puzzle 1
-		{
-			//int code = FCString::Atoi(*MessageString);
-			
-			if (InPuzzle1)
-				SendPlayerInputPuzzle1(MessageString);
-			//if (InPuzzle2)
-			//	SendPlayerInputPuzzle2(MessageString);
-			//if (InPuzzle3)
-			//	SendPlayerInputPuzzle3(MessageString);
+		{			
+			//if (InPuzzle1)
+				SendPlayerInput(MessageString);
 		}
 		
 		if (MessageString.Contains("+")) //Checks if messages comes from puzzle 2
 		{
-			if (InPuzzle2)
-				SendPlayerInputPuzzle2(MessageString.Replace(TEXT("+"), TEXT("")));
+			//if (InPuzzle2)
+				SendPlayerInput(MessageString.Replace(TEXT("+"), TEXT("")));
 		}
 		
 		if (MessageString.Contains(" ")) //Checks if messages comes from puzzle 3
 		{
-			if (InPuzzle3)
-				SendPlayerInputPuzzle3(MessageString.Replace(TEXT(" "), TEXT("")));
+			//if (InPuzzle3)
+				SendPlayerInput(MessageString.Replace(TEXT(" "), TEXT("")));
 		}
 
 	});
@@ -191,17 +184,7 @@ void UWebSocketGameInstance::TriggerPuzzle3event()
 	DelegateTriggerPuzzle3.Broadcast(69, "");
 }
 
-void UWebSocketGameInstance::SendPlayerInputPuzzle1(FString text)
+void UWebSocketGameInstance::SendPlayerInput(FString text)
 {
-	DelegateSendPlayerInputPuzzle1.Broadcast(420, text);
-}
-
-void UWebSocketGameInstance::SendPlayerInputPuzzle2(FString text)
-{
-	DelegateSendPlayerInputPuzzle2.Broadcast(420, text);
-}
-
-void UWebSocketGameInstance::SendPlayerInputPuzzle3(FString text)
-{
-	DelegateSendPlayerInputPuzzle3.Broadcast(420, text);
+	DelegateSendPlayerInput.Broadcast(420, text);
 }

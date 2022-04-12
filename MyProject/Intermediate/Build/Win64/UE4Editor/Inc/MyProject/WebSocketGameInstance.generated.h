@@ -31,9 +31,7 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_SPARSE_DATA
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle3); \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle2); \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle1); \
+	DECLARE_FUNCTION(execSendPlayerInput); \
 	DECLARE_FUNCTION(execTriggerPuzzle3event); \
 	DECLARE_FUNCTION(execTriggerPuzzle2event); \
 	DECLARE_FUNCTION(execTriggerPuzzle1event); \
@@ -45,9 +43,7 @@ static inline void FNewTypeDelegae_DelegateWrapper(const FMulticastScriptDelegat
 
 #define MyProject_Source_MyProject_WebSocketGameInstance_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle3); \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle2); \
-	DECLARE_FUNCTION(execSendPlayerInputPuzzle1); \
+	DECLARE_FUNCTION(execSendPlayerInput); \
 	DECLARE_FUNCTION(execTriggerPuzzle3event); \
 	DECLARE_FUNCTION(execTriggerPuzzle2event); \
 	DECLARE_FUNCTION(execTriggerPuzzle1event); \

@@ -35,11 +35,7 @@ public:
 	UPROPERTY(BlueprintAssignable)
 		FNewTypeDelegae DelegateTriggerPuzzle3;
 	UPROPERTY(BlueprintAssignable)
-		FNewTypeDelegae DelegateSendPlayerInputPuzzle1;
-	UPROPERTY(BlueprintAssignable)
-		FNewTypeDelegae DelegateSendPlayerInputPuzzle2;
-	UPROPERTY(BlueprintAssignable)
-		FNewTypeDelegae DelegateSendPlayerInputPuzzle3;
+		FNewTypeDelegae DelegateSendPlayerInput;
 
 	//Functions that call the above delegates
 	UFUNCTION(BlueprintCallable)
@@ -57,11 +53,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void TriggerPuzzle3event();
 	UFUNCTION(BlueprintCallable)
-		void SendPlayerInputPuzzle1(FString text);
-	UFUNCTION(BlueprintCallable)
-		void SendPlayerInputPuzzle2(FString text);
-	UFUNCTION(BlueprintCallable)
-		void SendPlayerInputPuzzle3(FString text);
+		void SendPlayerInput(FString text);
 
 	virtual void Init() override;
 	virtual void Shutdown() override;
