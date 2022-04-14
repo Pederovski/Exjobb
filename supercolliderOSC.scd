@@ -42,9 +42,9 @@ OSCdef.new(\CodeLow,
 	{
 		arg msg;
 
-		("msg" + msg).postln;
+		("msg" + msg[1]).postln;
 
-		Pbind(\instrument, \bell, \freq, Pseq([200],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, msg-1).play;
+		Pbind(\instrument, \bell, \freq, Pseq([200],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, msg[1]-1).play;
 
 	},'/CodeLow');
 
@@ -52,14 +52,37 @@ OSCdef.new(\CodeHigh,
 	{
 		arg msg;
 
-		("msg" + msg).postln;
+		("msg" + msg[1]).postln;
+
+		Pbind(\instrument, \bell, \freq, Pseq([400],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, msg[1]-1).play;
+
+	},'/CodeHigh');
+
+OSCdef.new(\ClockHour,
+	{
+		arg msg;
+
+		("msg" + msg[1]).postln;
+
+		Pbind(\instrument, \bell, \freq, Pseq([200],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, msg-1).play;
+
+	},'/ClockHour');
+
+OSCdef.new(\ClockMinute,
+	{
+		arg msg;
+
+		("msg" + msg[1]).postln;
 
 		Pbind(\instrument, \bell, \freq, Pseq([400],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, msg-1).play;
 
-	},'/CodeHigh');
+	},'/ClockMinute');
+
 )
 
 
+
+Pbind(\instrument, \bell, \freq, Pseq([400],1,0), \dur, Pseq([0.15],1,0), \amp, 0.5, \pan, 4).play
 
 //Debugging without sound
 (
