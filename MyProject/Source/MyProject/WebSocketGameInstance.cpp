@@ -12,7 +12,7 @@ void UWebSocketGameInstance::Init() {
 		FModuleManager::Get().LoadModule("WebSockets");
 	}
 
-	WebSocket = FWebSocketsModule::Get().CreateWebSocket("ws://localhost:5500");
+	WebSocket = FWebSocketsModule::Get().CreateWebSocket("ws://192.168.43.230:5000");
 
 	// Event handlers
 	WebSocket->OnConnected().AddLambda([]() {
