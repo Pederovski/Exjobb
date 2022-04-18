@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\peddr489\\Documents\\GitHub\\Exjobb\\MyProject\\Source\\MyProject\\MyProject.Build.cs",
-		"C:\\Users\\peddr489\\Documents\\GitHub\\Exjobb\\MyProject\\Source\\MyProject.Target.cs",
-		"C:\\Users\\peddr489\\Documents\\GitHub\\Exjobb\\MyProject\\Source\\MyProjectEditor.Target.cs"
+		"E:\\Unreal\\Exjobb\\MyProject\\Source\\MyProject\\MyProject.Build.cs",
+		"E:\\Unreal\\Exjobb\\MyProject\\Source\\MyProject.Target.cs",
+		"E:\\Unreal\\Exjobb\\MyProject\\Source\\MyProjectEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }
