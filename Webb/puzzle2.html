@@ -36,7 +36,7 @@
     </section>
     <script>
         console.log("Entered Puzzle2 script\n");
-        var socket = new WebSocket('ws://localhost:5500');
+        var socket = new WebSocket('ws://localhost:5000');
         socket.onopen = function(event) {
             console.log('Connection open in Puzzle2');
             // Send signal to Unreal to change camera view
@@ -53,9 +53,31 @@
             setTimeout(function() {
             trigButton.disabled = false;
             }, 5000);
+        }
+        // Send puzzle input to Unreal
+        function submitPuzzle2() {
+            // Save the input in variables & send it to Unreal
+            var puzzle2_1 = document.getElementById('puzzle2input1').value;
+            var puzzle2_2 = document.getElementById('puzzle2input2').value;
+            console.log(puzzle2_1 + "+" + puzzle2_2);
+            socket.send(puzzle2_1 + "+" + puzzle2_2);
 
-            // Generate a random number
-            function generateNumber() {
+            // Clear input field after submit
+            document.getElementById('puzzle2input1').value = '';
+            document.getElementById('puzzle2input2').value = '';
+        }
+    </script>
+    <br><br><br><br>
+    <section>
+        <div class="puzzleroomexit"><a href="controlRoom.html">BACK</a></div>
+    </section>
+</body>
+</html>
+
+<!-- Codegraveyard
+    Code used in triggerPuzzle2() function to create sequence. Not used anymore.
+    // Generate a random number
+            /*function generateNumber() {
                 let rand = Math.random() * 8; // Generates random number between 0-7 w. decimals
                 //console.log(rand); 
                 rand = Math.floor(rand); // Removes decimals (avrundar nedåt)
@@ -86,24 +108,5 @@
             var soundSequence = `${highPitch[0]}${highPitch[1]}${highPitch[2]}+${lowPitch[0]}${lowPitch[1]}${lowPitch[2]}`;
             console.log(soundSequence);
             // Send code sequence to Unreal
-            //socket.send(soundSequence);
-        }
-        // Send puzzle input to Unreal
-        function submitPuzzle2() {
-            // Save the input in variables & send it to Unreal
-            var puzzle2_1 = document.getElementById('puzzle2input1').value;
-            var puzzle2_2 = document.getElementById('puzzle2input2').value;
-            console.log(puzzle2_1 + "+" + puzzle2_2);
-            socket.send(puzzle2_1 + "+" + puzzle2_2);
-
-            // Clear input field after submit
-            document.getElementById('puzzle2input1').value = '';
-            document.getElementById('puzzle2input2').value = '';
-        }
-    </script>
-    <br><br><br><br>
-    <section>
-        <div class="puzzleroomexit"><a href="controlRoom.html">BACK</a></div>
-    </section>
-</body>
-</html>
+            socket.send(soundSequence);*/
+-->

@@ -30,7 +30,7 @@
     </section>
     <script>
         console.log("Entered Puzzle1 script\n");
-        var socket = new WebSocket('ws://localhost:5500');
+        var socket = new WebSocket('ws://localhost:5000');
         socket.onopen = function(event) {
             console.log('Connection open in Puzzle1');
             // Send signal to Unreal to change camera view

@@ -12,16 +12,16 @@
 
 
 // ---  HTML SERVER  ---------------------------------------------------
-
+const express = require("express");
 const http = require('http');
 const fs = require('fs');
 var path = require('path');
 
 let connection = null;
 
-const httpserver = http.createServer(function(request, response) {
-  /*response.writeHead(200, {'content-type':'text/html'});
-  fs.createReadStream('index.html').pipe(response);*/
+/**/const httpserver = http.createServer(function(request, response) {
+  //response.writeHead(200, {'content-type':'text/html'});
+  //fs.createReadStream('index.html').pipe(response);
   console.log('request', request.url);
 
   var filePath = '.' + request.url;
@@ -71,7 +71,13 @@ const httpserver = http.createServer(function(request, response) {
 
 // ---  WEBSOCKET SERVER  -----------------------------------------------
 const WebSocket = require('ws');
-const webSocketServer = new WebSocket.Server({ port: 5500 });
+//const PORT = process.env.PORT || 5000;
+//const app = express().use(express.static(__dirname));
+//const server = http.createServer(app);
+const webSocketServer = new WebSocket.Server({ port: 5000 });
+// { port: 5000 }
+// {server}
+// 192.168.233.28:5000
 
 var wsConnection;
 
@@ -80,7 +86,7 @@ var wsConnection;
 });*/
 
 webSocketServer.on('connection', (webSocketConnection) => {
-  console.log('WebSocket server running on port 5500. Received connection from UE4 WebSocket client.');
+  console.log('WebSocket server running on port 5000.');
   
   // First connection creates where you can send message from
   // e.g. first connect to webpage makes messages travel from website to Unreal, not vice versa (?)
@@ -94,10 +100,18 @@ webSocketServer.on('connection', (webSocketConnection) => {
     console.log('Received message from WebSocket client: %s.', message);
 
     wsConnection.send(message);
+
+    // testa att ta emot client's ip adress
+    //const ip = request.socket.remoteAddress;
+    //console.log('ip address: ' + ip);
   });
 
-  //webSocketConnection.send(`Hello, this is server speaking!`);
+  webSocketConnection.send(`Hello, this is server speaking!`);
 });
+
+/*server.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
+});*/
 
 const open = require('open');
 open('http://localhost:3000/index.html', {app:'chrome'});
