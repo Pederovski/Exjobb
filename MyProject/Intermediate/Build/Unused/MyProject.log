@@ -1,3 +1,26 @@
-﻿  '"E:\Unreal\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat"' is not recognized as an internal or external command,
-  operable program or batch file.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: The command ""E:\Unreal\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" MyProjectEditor Win64 Development -Project="C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\MyProject.uproject" -WaitMutex -FromMsBuild" exited with code 9009.
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Peder\Desktop\Exjobb\Exjobb).
+  Creating makefile for MyProjectEditor (no existing makefile)
+  Parsing headers for MyProjectEditor
+    Running UnrealHeaderTool "C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\MyProject.uproject" "C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\MyProjectEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Peder\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for MyProjectEditor in 25,0403922 seconds
+  Building MyProjectEditor...
+  Using Visual Studio 2019 14.29.30133 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 13 actions with 4 processes...
+    [1/13] SharedPCH.Engine.ShadowErrors.cpp
+    [2/13] MyActor.cpp
+    [3/13] MyActor.gen.cpp
+    [4/13] WebSocketGameInstance.gen.cpp
+    [5/13] WebSocketGameInstance.cpp
+    [6/13] MyProject.init.gen.cpp
+    [7/13] MyProjectGameModeBase.cpp
+    [8/13] MyProjectGameModeBase.gen.cpp
+    [9/13] MyTestClass.cpp
+    [10/13] MyProject.cpp
+    [11/13] UE4Editor-MyProject.lib
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject.exp
+    [12/13] UE4Editor-MyProject.dll
+       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject.suppressed.exp
+    [13/13] MyProjectEditor.target
+  Total time in Parallel executor: 40,66 seconds
+  Total execution time: 70,06 seconds
