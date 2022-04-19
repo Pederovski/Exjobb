@@ -1,12 +1,3 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\peddr489\Documents\GitHub\Exjobb).
-  Building MyProjectEditor...
-  Using Visual Studio 2019 14.27.29110 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 12 processes...
-    [1/4] WebSocketGameInstance.cpp
-    [2/4] UE4Editor-MyProject-0011.lib
-       Creating library C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0011.lib and object C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0011.exp
-    [3/4] UE4Editor-MyProject-0011.dll
-       Creating library C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0011.suppressed.lib and object C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0011.suppressed.exp
-    [4/4] MyProjectEditor.target
-  Total time in Parallel executor: 1,71 seconds
-  Total execution time: 2,46 seconds
+﻿  '"E:\Unreal\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat"' is not recognized as an internal or external command,
+  operable program or batch file.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: The command ""E:\Unreal\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" MyProjectEditor Win64 Development -Project="C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\MyProject.uproject" -WaitMutex -FromMsBuild" exited with code 9009.
