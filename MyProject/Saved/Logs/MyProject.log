@@ -1360,3 +1360,458 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.04.21-08.53.22:597][210]AssetCheck: New page: Asset Save: Minimal_Default
 [2022.04.21-08.53.22:597][210]LogContentValidation: Display: Validating World /Game/StarterContent/Maps/Minimal_Default.Minimal_Default
 [2022.04.21-08.53.25:178][506]LogSlate: Took 0.009534 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.04.21-12.28.22:195][ 33]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{732e4f1f-4a43-4d9b-adfe-5134fe776990}.
+[2022.04.21-12.28.22:196][ 33]LogAudioMixer: Resetting audio stream to device id 
+[2022.04.21-12.28.22:205][ 33]LogAudioMixer: Display: 0: FrontLeft
+[2022.04.21-12.28.22:205][ 33]LogAudioMixer: Display: 1: FrontRight
+[2022.04.21-14.39.38:721][709]AssetReimport: New page: Outstanding source content changes 18:39:38
+[2022.04.21-14.39.38:726][709]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx)
+[2022.04.21-14.39.38:736][709]LogFbx: Loading FBX Scene from E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx
+[2022.04.21-14.39.38:748][709]LogFbx: FBX Scene Loaded Succesfully
+[2022.04.21-14.39.40:213][709]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.04.21-14.39.40:426][709]LogStaticMesh: Building static mesh TV...
+[2022.04.21-14.39.40:464][709]LogStaticMesh: Built static mesh [0.04s] /Game/MyAssets/TV/TV.TV
+[2022.04.21-14.39.40:720][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:722][710]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 2
+[2022.04.21-14.39.40:722][710]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-14.39.40:722][710]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:722][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:726][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:728][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:730][710]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 6
+[2022.04.21-14.39.40:730][710]LogShaderCompilers: Display: Started 3 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:732][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:734][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:736][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:740][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:742][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:746][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:748][710]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.40:764][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:778][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:790][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:808][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:822][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:836][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:850][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:864][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:880][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:894][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:916][710]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.40:937][710]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyAssets/TV/TV" FILE="../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset" SILENT=true
+[2022.04.21-14.39.40:959][710]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/TV56DED13E459EA79A6717948CF0455AB5.tmp' to '../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-14.39.41:251][711]AssetCheck: New page: Asset Save: TV
+[2022.04.21-14.39.41:251][711]LogContentValidation: Display: Validating StaticMesh /Game/MyAssets/TV/TV.TV
+[2022.04.21-14.39.41:638][727]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 17
+[2022.04.21-14.39.41:638][727]LogShaderCompilers: Display: Started 6 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.41:639][727]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-14.39.41:639][727]LogShaderCompilers: Display: Total job queries 1102, among them cache hits 14 (1.27%)
+[2022.04.21-14.39.41:639][727]LogShaderCompilers: Display: Tracking 897 distinct input hashes that result in 25 distinct outputs (2.79%)
+[2022.04.21-14.39.41:639][727]LogShaderCompilers: Display: RAM used: 0.18 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-14.39.41:639][727]LogShaderCompilers: Display: ================================================
+[2022.04.21-14.39.42:151][778]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 11
+[2022.04.21-14.39.42:151][778]LogShaderCompilers: Display: Started 4 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.43:025][832]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 7
+[2022.04.21-14.39.43:026][832]LogShaderCompilers: Display: Started 3 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.44:242][957]AssetReimport: Importing new asset /Game/MyAssets/TV/TV.
+[2022.04.21-14.39.44:683][  6]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-14.39.44:687][  6]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-14.39.45:091][ 53]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 4
+[2022.04.21-14.39.45:091][ 53]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.45:599][109]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 2
+[2022.04.21-14.39.45:599][109]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.45:926][144]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-14.39.45:926][144]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.39.46:294][185]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 154
+[2022.04.21-14.39.46:294][185]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.46:409][198]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 144
+[2022.04.21-14.39.46:409][198]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.46:470][205]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 134
+[2022.04.21-14.39.46:470][205]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.52:141][832]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 124
+[2022.04.21-14.39.52:141][832]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.52:359][857]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 114
+[2022.04.21-14.39.52:359][857]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.52:531][875]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 104
+[2022.04.21-14.39.52:531][875]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.58:220][505]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 94
+[2022.04.21-14.39.58:221][505]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.58:435][529]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 84
+[2022.04.21-14.39.58:435][529]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.39.58:675][556]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 74
+[2022.04.21-14.39.58:675][556]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.04:544][204]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 64
+[2022.04.21-14.40.04:544][204]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.04:902][243]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 54
+[2022.04.21-14.40.04:902][243]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.04:924][246]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 44
+[2022.04.21-14.40.04:924][246]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.10:315][846]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 34
+[2022.04.21-14.40.10:315][846]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.10:824][902]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 24
+[2022.04.21-14.40.10:824][902]LogShaderCompilers: Display: Started 9 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.11:548][983]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 15
+[2022.04.21-14.40.11:548][983]LogShaderCompilers: Display: Started 6 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.15:091][376]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 9
+[2022.04.21-14.40.15:091][376]LogShaderCompilers: Display: Started 4 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.16:371][517]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 5
+[2022.04.21-14.40.16:371][517]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.16:615][544]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 3
+[2022.04.21-14.40.16:615][544]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.17:475][639]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 1
+[2022.04.21-14.40.17:475][639]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-14.40.56:630][203]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.40.57:084][255]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.41.08:489][566]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.41.14:415][251]Cmd: TRANSACTION UNDO
+[2022.04.21-14.41.14:426][251]LogEditorTransaction: Undo Move Actors
+[2022.04.21-14.41.14:755][260]Cmd: TRANSACTION UNDO
+[2022.04.21-14.41.14:755][260]LogEditorTransaction: Undo Move Actors
+[2022.04.21-14.41.15:220][299]Cmd: TRANSACTION UNDO
+[2022.04.21-14.41.15:220][299]LogEditorTransaction: Undo Clicking on Actors
+[2022.04.21-14.41.16:400][425]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.41.32:778][341]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.41.33:661][445]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.41.34:292][517]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.41.36:077][728]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.41.39:781][157]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.41.49:238][285]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.42.32:439][429]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.42.33:111][508]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.42.40:360][369]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.43.30:709][327]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
+[2022.04.21-14.43.30:777][327]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/Minimal_Default_Auto1CB74290F49A73AD7AED4678EC9610424.tmp' to '../../../../../Exjobb/MyProject/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto1.umap'
+[2022.04.21-14.43.30:779][327]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/StarterContent/Maps/Minimal_Default' took 0.084
+[2022.04.21-14.43.30:779][327]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.084
+[2022.04.21-14.43.31:713][436]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.43.43:531][833]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.43.44:083][898]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.43.45:685][ 89]Cmd: DELETE
+[2022.04.21-14.43.45:685][ 89]Cmd: ACTOR DELETE
+[2022.04.21-14.43.45:689][ 89]LogEditorActor: Deleted Actor: StaticMeshActor
+[2022.04.21-14.43.45:695][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-14.43.45:697][ 89]LogEditorActor: Deleted 1 Actors (0.012 secs)
+[2022.04.21-14.43.47:243][251]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.43.47:721][306]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.49.04:961][527]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/MyAssets/TV/TV.TV
+[2022.04.21-14.49.05:233][527]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/EditorMaterials/AssetViewer/EpicQuadPanorama_CC+EV1.EpicQuadPanorama_CC+EV1', its maximum texture size has been explicitly set to 512.
+[2022.04.21-14.49.05:413][527]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/SunsetAmbientCubemap.SunsetAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2022.04.21-14.49.06:281][527]LogRenderer: Reallocating scene render targets to support 1432x920 Format 10 NumSamples 1 (Frame:1).
+[2022.04.21-14.49.22:861][ 80]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/MyAssets/TV/Material.Material
+[2022.04.21-14.49.22:896][ 80]LogMaterial: Display: Missing cached shadermap for Material in PCD3D_SM5, Default, SM5 (DDC key hash: BF447890959FD1CE44AE22F731BF78B6EDF2A6F7), compiling. 
+[2022.04.21-14.49.23:008][ 80]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-14.49.23:008][ 80]LogShaderCompilers: Display: Total job queries 1112, among them cache hits 24 (2.16%)
+[2022.04.21-14.49.23:008][ 80]LogShaderCompilers: Display: Tracking 1072 distinct input hashes that result in 25 distinct outputs (2.33%)
+[2022.04.21-14.49.23:008][ 80]LogShaderCompilers: Display: RAM used: 0.19 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-14.49.23:008][ 80]LogShaderCompilers: Display: ================================================
+[2022.04.21-14.49.23:210][ 80]LogMaterial: Display: Missing cached shadermap for Material in PCD3D_SM5, Default, SM5 (DDC key hash: F0449CE4A7504338349D97FCFDD9309A9F5C0A82), compiling. 
+[2022.04.21-14.49.23:227][ 80]LogMaterial: Display: Missing cached shadermap for Material in PCD3D_SM5, Default, SM5 (DDC key hash: 2784F143FBDFECD7D86347F1D5D2EA5D274BD1F7), compiling. 
+[2022.04.21-14.49.23:236][ 80]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: 2EC5A677CAEEAE363470BCB3EB90FE658A234470), compiling. 
+[2022.04.21-14.49.23:262][ 80]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.49.23:282][ 80]LogSlate: Took 0.000174 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2022.04.21-14.49.23:568][ 82]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.49.23:570][ 82]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.49.23:570][ 82]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.49.23:570][ 82]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.49.23:570][ 82]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.49.23:581][ 83]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 2
+[2022.04.21-14.49.23:582][ 83]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-14.49.23:582][ 83]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-14.49.35:175][124]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2022.04.21-14.49.35:175][124]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.04.21-14.49.51:662][383]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/MyAssets/TV/Material_001.Material_001
+[2022.04.21-14.49.51:663][383]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: 328C97264A9F6F66281CFF72C1B886D66F141630), compiling. 
+[2022.04.21-14.49.51:803][383]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: 5AE1A69DF5ED9DDEC5CC833255CD78C17BFCF77C), compiling. 
+[2022.04.21-14.49.51:805][383]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: 28FE4AD33F12D8C6202832BF2FFE2030A5775407), compiling. 
+[2022.04.21-14.49.51:807][383]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: 4A1BCDC6C57929E1A3CCEA35F71925193E4AB6EB), compiling. 
+[2022.04.21-14.49.51:816][383]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.49.51:895][385]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.49.51:895][385]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.49.51:895][385]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.49.51:895][385]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.01:582][267]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: 75E3FFD658C66B806651EF77B9D34B88CFDD8918), compiling. 
+[2022.04.21-14.50.01:584][267]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: D4D661CF8CB6832531B87B616FF1880534A5B257), compiling. 
+[2022.04.21-14.50.01:602][267]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.50.01:636][269]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.01:669][270]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.50.01:669][270]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.50.01:669][270]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.50.01:669][270]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.03:446][427]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: A35847011938E6CBE506DACDE6A49F269FA2D4C9), compiling. 
+[2022.04.21-14.50.03:447][427]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: 20442EBFF890826A76521329CD739927EE910205), compiling. 
+[2022.04.21-14.50.03:450][427]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.50.03:489][429]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.03:513][430]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.50.03:513][430]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.50.03:513][430]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.50.03:513][430]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.06:366][717]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: BFBE01E3D68854F2EE107C7814968197C803765B), compiling. 
+[2022.04.21-14.50.06:368][717]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: 399A2C229A41BAD079630170821320C9BE6DC6F2), compiling. 
+[2022.04.21-14.50.06:371][717]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.50.06:422][720]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.50.06:422][720]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.50.06:422][720]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.50.06:422][720]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.07:713][829]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: 9BECC95A7277018972F033A74DEB33D0357492E6), compiling. 
+[2022.04.21-14.50.07:714][829]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: EE4EF4BBE287AB74F1E05589BD990FDB0426DE81), compiling. 
+[2022.04.21-14.50.07:716][829]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.50.07:750][831]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.07:782][832]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.50.07:782][832]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.50.07:782][832]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.50.07:782][832]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.08:329][880]LogMaterial: Display: Missing cached shadermap for Material_001 in PCD3D_SM5, Default, SM5 (DDC key hash: E4F313444B4724C8187C181ADE564F5F11F4624D), compiling. 
+[2022.04.21-14.50.08:330][880]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionVectorParameter_0 in PCD3D_SM5, Default, SM5 (DDC key hash: 9E8C8276C3FCA6889F633537A579DC410515C283), compiling. 
+[2022.04.21-14.50.08:332][880]LogSlate: Window 'Color Picker' being destroyed
+[2022.04.21-14.50.08:339][880]MaterialEditorStats: Texture samplers: 0/16
+[2022.04.21-14.50.08:368][882]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.08:392][883]MaterialEditorStats: Base pass shader: 119 instructions
+[2022.04.21-14.50.08:392][883]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 193 instructions
+[2022.04.21-14.50.08:392][883]MaterialEditorStats: Base pass vertex shader: 42 instructions
+[2022.04.21-14.50.08:392][883]MaterialEditorStats: Texture samplers: 2/16
+[2022.04.21-14.50.52:118][ 84]LogSlate: Window 'Message' being destroyed
+[2022.04.21-14.50.52:131][ 84]Message dialog closed, result: No, title: Message, text: Would you like to apply the changes of the modified material to the original material?
+/Game/MyAssets/TV/Material_001.Material_001
+(Selecting 'No' will cause all changes to be lost!)
+[2022.04.21-14.50.52:152][ 84]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2022.04.21-14.50.52:152][ 84]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.04.21-14.53.31:131][654]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.04.21-14.53.31:192][654]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/Minimal_Default_Auto22DC3DCF54E89D143C0911897589A915C.tmp' to '../../../../../Exjobb/MyProject/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto2.umap'
+[2022.04.21-14.53.31:193][654]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/StarterContent/Maps/Minimal_Default' took 0.089
+[2022.04.21-14.53.31:194][654]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.089
+[2022.04.21-14.54.12:648][897]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.54.14:040][ 44]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.54.14:857][126]Cmd: DELETE
+[2022.04.21-14.54.14:857][126]Cmd: ACTOR DELETE
+[2022.04.21-14.54.14:861][126]LogEditorActor: Deleted Actor: StaticMeshActor
+[2022.04.21-14.54.14:869][126]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2022.04.21-14.54.14:870][126]LogEditorActor: Deleted 1 Actors (0.013 secs)
+[2022.04.21-14.54.29:918][518]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-14.54.33:920][518]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-14.54.37:393][642]LogSlate: Window 'TV' being destroyed
+[2022.04.21-14.54.37:405][642]LogSlate: Window 'TV' being destroyed
+[2022.04.21-14.54.37:408][642]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2022.04.21-14.54.37:408][642]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.04.21-14.54.42:084][153]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2022.04.21-14.54.49:283][153]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-14.54.49:416][153]LogUObjectGlobals: Force Deleting 12 Package(s):
+	Asset Name: /Game/MyAssets/TV/Material_006.Material_006
+	Asset Name: /Game/MyAssets/TV/Material_005.Material_005
+	Asset Name: /Game/MyAssets/TV/Material_007.Material_007
+	Asset Name: /Game/MyAssets/TV/Material_004.Material_004
+	Asset Name: /Game/MyAssets/TV/Material_011.Material_011
+	Asset Name: /Game/MyAssets/TV/Material_008.Material_008
+	Asset Name: /Game/MyAssets/TV/Material_003.Material_003
+	Asset Name: /Game/MyAssets/TV/Material_010.Material_010
+	Asset Name: /Game/MyAssets/TV/Material_009.Material_009
+	Asset Name: /Game/MyAssets/TV/Material_001.Material_001
+[2022.04.21-14.54.51:777][153]LogObjectTools: Warning: Detected inconsistencies between reference gathering algorithms. Switching 'Editor.UseLegacyGetReferencersForDeletion' on for the remainder of this editor session.
+[2022.04.21-14.54.52:390][153]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2022.04.21-14.54.52:401][153]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2022.04.21-14.54.52:408][153]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2022.04.21-14.54.52:618][153]SourceControl: rm 'MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-14.55.39:941][ 35]AssetReimport: New page: Outstanding source content changes 18:55:39
+[2022.04.21-14.55.39:943][ 35]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx)
+[2022.04.21-14.55.39:950][ 35]LogFbx: Loading FBX Scene from E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx
+[2022.04.21-14.55.39:962][ 35]LogFbx: FBX Scene Loaded Succesfully
+[2022.04.21-14.58.30:261][ 35]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.04.21-14.58.30:448][ 35]LogStaticMesh: Building static mesh TV...
+[2022.04.21-14.58.30:486][ 35]LogStaticMesh: Built static mesh [0.04s] /Game/MyAssets/TV/TV.TV
+[2022.04.21-14.58.30:996][ 36]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-14.58.30:996][ 36]LogShaderCompilers: Display: Total job queries 1450, among them cache hits 360 (24.83%)
+[2022.04.21-14.58.30:997][ 36]LogShaderCompilers: Display: Tracking 1074 distinct input hashes that result in 26 distinct outputs (2.42%)
+[2022.04.21-14.58.30:997][ 36]LogShaderCompilers: Display: RAM used: 0.19 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-14.58.30:997][ 36]LogShaderCompilers: Display: ================================================
+[2022.04.21-14.58.31:010][ 36]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyAssets/TV/TV" FILE="../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset" SILENT=true
+[2022.04.21-14.58.31:029][ 36]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/TV3A92B86045354D3B0A30E1B0A3759B58.tmp' to '../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-14.58.31:276][ 37]AssetCheck: New page: Asset Save: TV
+[2022.04.21-14.58.31:276][ 37]LogContentValidation: Display: Validating StaticMesh /Game/MyAssets/TV/TV.TV
+[2022.04.21-14.58.34:261][392]AssetReimport: Importing new asset /Game/MyAssets/TV/TV.
+[2022.04.21-14.58.35:519][543]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-14.58.35:524][543]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-14.58.38:205][804]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.58.38:543][843]LogActorFactory: Actor Factory created TV
+[2022.04.21-14.58.42:522][311]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (TV)
+[2022.04.21-14.58.43:024][370]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-14.59.14:684][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2022.04.21-14.59.17:057][111]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-14.59.17:807][111]LogUObjectGlobals: Force Deleting 12 Package(s):
+	Asset Name: /Game/MyAssets/TV/Material_006.Material_006
+	Asset Name: /Game/MyAssets/TV/Material_005.Material_005
+	Asset Name: /Game/MyAssets/TV/Material_007.Material_007
+	Asset Name: /Game/MyAssets/TV/Material_004.Material_004
+	Asset Name: /Game/MyAssets/TV/Material_008.Material_008
+	Asset Name: /Game/MyAssets/TV/Material_011.Material_011
+	Asset Name: /Game/MyAssets/TV/Material_003.Material_003
+	Asset Name: /Game/MyAssets/TV/Material_010.Material_010
+	Asset Name: /Game/MyAssets/TV/Material_009.Material_009
+	Asset Name: /Game/MyAssets/TV/Material_001.Material_001
+[2022.04.21-14.59.18:988][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2022.04.21-14.59.18:995][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2022.04.21-14.59.19:001][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-14.59.19:146][111]SourceControl: rm 'MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-15.02.10:188][320]AssetReimport: New page: Outstanding source content changes 19:02:10
+[2022.04.21-15.02.10:189][320]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV_2.fbx)
+[2022.04.21-15.02.10:197][320]LogFbx: Loading FBX Scene from E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV_2.fbx
+[2022.04.21-15.02.10:210][320]LogFbx: FBX Scene Loaded Succesfully
+[2022.04.21-15.02.15:107][320]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.04.21-15.02.15:284][320]LogStaticMesh: Building static mesh TV_2...
+[2022.04.21-15.02.15:319][320]LogStaticMesh: Built static mesh [0.04s] /Game/MyAssets/TV/TV_2.TV_2
+[2022.04.21-15.02.15:573][321]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.02.15:577][321]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 2
+[2022.04.21-15.02.15:577][321]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-15.02.15:577][321]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.02.15:637][321]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.15:637][321]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 14
+[2022.04.21-15.02.15:637][321]LogShaderCompilers: Display: Started 5 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.15:793][321]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyAssets/TV/TV_2" FILE="../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV_2.uasset" SILENT=true
+[2022.04.21-15.02.15:825][321]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/TV_2F47F7E9149D5F66DA7C5ABA8A808B64C.tmp' to '../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV_2.uasset'
+[2022.04.21-15.02.16:110][321]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-15.02.16:110][321]LogShaderCompilers: Display: Total job queries 1642, among them cache hits 536 (32.64%)
+[2022.04.21-15.02.16:110][321]LogShaderCompilers: Display: Tracking 1074 distinct input hashes that result in 26 distinct outputs (2.42%)
+[2022.04.21-15.02.16:110][321]LogShaderCompilers: Display: RAM used: 0.19 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-15.02.16:110][321]LogShaderCompilers: Display: ================================================
+[2022.04.21-15.02.16:132][322]AssetCheck: New page: Asset Save: TV_2
+[2022.04.21-15.02.16:132][322]LogContentValidation: Display: Validating StaticMesh /Game/MyAssets/TV/TV_2.TV_2
+[2022.04.21-15.02.16:367][327]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 9
+[2022.04.21-15.02.16:367][327]LogShaderCompilers: Display: Started 4 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.17:619][466]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 5
+[2022.04.21-15.02.17:619][466]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.19:097][635]AssetReimport: Importing new asset /Game/MyAssets/TV/TV_2.
+[2022.04.21-15.02.20:701][822]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 3
+[2022.04.21-15.02.20:701][822]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.20:949][851]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 1
+[2022.04.21-15.02.20:949][851]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.02.30:171][951]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.02.30:176][951]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.02.32:888][210]LogActorFactory: Actor Factory created TV_2
+[2022.04.21-15.02.33:362][257]LogActorFactory: Actor Factory created TV_2
+[2022.04.21-15.02.37:820][771]Cmd: DELETE
+[2022.04.21-15.02.37:820][771]Cmd: ACTOR DELETE
+[2022.04.21-15.02.37:824][771]LogEditorActor: Deleted Actor: StaticMeshActor
+[2022.04.21-15.02.37:832][771]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.04.21-15.02.37:837][771]LogEditorActor: Deleted 1 Actors (0.016 secs)
+[2022.04.21-15.02.44:186][473]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2022.04.21-15.02.47:040][473]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-15.02.47:303][473]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2022.04.21-15.02.47:316][473]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2022.04.21-15.02.47:322][473]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2022.04.21-15.02.47:487][473]SourceControl: rm 'MyProject/Content/MyAssets/TV/TV_2.uasset'
+[2022.04.21-15.06.09:829][354]AssetReimport: New page: Outstanding source content changes 19:06:09
+[2022.04.21-15.06.09:830][354]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx)
+[2022.04.21-15.06.09:838][354]LogFbx: Loading FBX Scene from E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/TV.fbx
+[2022.04.21-15.06.09:849][354]LogFbx: FBX Scene Loaded Succesfully
+[2022.04.21-15.06.34:171][354]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.04.21-15.06.34:342][354]LogStaticMesh: Building static mesh TV...
+[2022.04.21-15.06.34:377][354]LogStaticMesh: Built static mesh [0.04s] /Game/MyAssets/TV/TV.TV
+[2022.04.21-15.06.34:900][355]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-15.06.34:900][355]LogShaderCompilers: Display: Total job queries 1818, among them cache hits 712 (39.16%)
+[2022.04.21-15.06.34:900][355]LogShaderCompilers: Display: Tracking 1090 distinct input hashes that result in 26 distinct outputs (2.39%)
+[2022.04.21-15.06.34:900][355]LogShaderCompilers: Display: RAM used: 0.19 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-15.06.34:900][355]LogShaderCompilers: Display: ================================================
+[2022.04.21-15.06.34:913][355]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyAssets/TV/TV" FILE="../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset" SILENT=true
+[2022.04.21-15.06.34:933][355]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/TVF8B60E3D480682B36A85A2A11DCD408C.tmp' to '../../../../../Exjobb/MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-15.06.35:171][356]AssetCheck: New page: Asset Save: TV
+[2022.04.21-15.06.35:171][356]LogContentValidation: Display: Validating StaticMesh /Game/MyAssets/TV/TV.TV
+[2022.04.21-15.06.38:144][709]AssetReimport: Importing new asset /Game/MyAssets/TV/TV.
+[2022.04.21-15.06.41:557][117]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.06.41:562][117]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.06.43:662][322]LogActorFactory: Actor Factory created TV
+[2022.04.21-15.06.44:009][361]LogActorFactory: Actor Factory created TV
+[2022.04.21-15.06.50:826][145]Cmd: DELETE
+[2022.04.21-15.06.50:826][145]Cmd: ACTOR DELETE
+[2022.04.21-15.06.50:830][145]LogEditorActor: Deleted Actor: StaticMeshActor
+[2022.04.21-15.06.50:837][145]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2022.04.21-15.06.50:841][145]LogEditorActor: Deleted 1 Actors (0.015 secs)
+[2022.04.21-15.06.56:700][797]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-15.06.58:798][797]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-15.06.59:025][797]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2022.04.21-15.06.59:036][797]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-15.06.59:043][797]LogUObjectHash: Compacting FUObjectHashTables data took   0.25ms
+[2022.04.21-15.06.59:177][797]SourceControl: rm 'MyProject/Content/MyAssets/TV/TV.uasset'
+[2022.04.21-15.08.22:919][328]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2022.04.21-15.08.22:988][328]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/Minimal_Default_Auto3B89BD88A423CDA8E447AD98EA3685BFA.tmp' to '../../../../../Exjobb/MyProject/Saved/Autosaves/Game/StarterContent/Maps/Minimal_Default_Auto3.umap'
+[2022.04.21-15.08.22:989][328]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/StarterContent/Maps/Minimal_Default' took 0.080
+[2022.04.21-15.08.22:989][328]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.080
+[2022.04.21-15.12.39:033][218]AssetReimport: New page: Outstanding source content changes 19:12:39
+[2022.04.21-15.12.39:034][218]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/3d-model.fbx)
+[2022.04.21-15.12.39:042][218]LogFbx: Loading FBX Scene from E:/Unreal/Exjobb/MyProject/Content/MyAssets/TV/3d-model.fbx
+[2022.04.21-15.12.39:060][218]LogFbx: FBX Scene Loaded Succesfully
+[2022.04.21-15.13.10:397][218]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.04.21-15.13.10:435][218]LogStaticMesh: Building static mesh 3d-model...
+[2022.04.21-15.13.10:435][218]LogStaticMesh: Built static mesh [0.00s] /Game/MyAssets/TV/3d-model.3d-model
+[2022.04.21-15.13.10:707][219]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.10:709][219]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 2
+[2022.04.21-15.13.10:709][219]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-15.13.10:709][219]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.10:709][219]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.10:713][219]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.10:715][219]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 4
+[2022.04.21-15.13.10:715][219]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.10:727][219]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.10:741][219]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.10:756][219]LogShaderCompilers: Display: Submitted 14 shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.10:797][219]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyAssets/TV/3d-model" FILE="../../../../../Exjobb/MyProject/Content/MyAssets/TV/3d-model.uasset" SILENT=true
+[2022.04.21-15.13.10:803][219]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/3d-model31B1BDD6474A81062283B8B81349BE72.tmp' to '../../../../../Exjobb/MyProject/Content/MyAssets/TV/3d-model.uasset'
+[2022.04.21-15.13.11:112][220]AssetCheck: New page: Asset Save: 3d-model
+[2022.04.21-15.13.11:112][220]LogContentValidation: Display: Validating StaticMesh /Game/MyAssets/TV/3d-model.3d-model
+[2022.04.21-15.13.11:894][289]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 2
+[2022.04.21-15.13.11:894][289]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.11:897][289]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2022.04.21-15.13.11:897][289]LogShaderCompilers: Display: Total job queries 1866, among them cache hits 712 (38.16%)
+[2022.04.21-15.13.11:897][289]LogShaderCompilers: Display: Tracking 1091 distinct input hashes that result in 26 distinct outputs (2.38%)
+[2022.04.21-15.13.11:897][289]LogShaderCompilers: Display: RAM used: 0.19 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.02%
+[2022.04.21-15.13.11:897][289]LogShaderCompilers: Display: ================================================
+[2022.04.21-15.13.12:302][336]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 1
+[2022.04.21-15.13.12:302][336]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.13:113][425]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 42
+[2022.04.21-15.13.13:113][425]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.13:229][438]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 32
+[2022.04.21-15.13.13:229][438]LogShaderCompilers: Display: Started 10 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.13:293][445]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 22
+[2022.04.21-15.13.13:293][445]LogShaderCompilers: Display: Started 8 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.13:643][484]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.13.13:647][484]LogSlate: Window 'Message Log' being destroyed
+[2022.04.21-15.13.14:098][535]AssetReimport: Importing new asset /Game/MyAssets/TV/3d-model.
+[2022.04.21-15.13.16:680][799]LogActorFactory: Actor Factory created 3d-model
+[2022.04.21-15.13.17:282][866]LogActorFactory: Actor Factory created 3d-model
+[2022.04.21-15.13.18:720][ 19]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-15.13.20:143][158]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/MyAssets/TV/3d-model.3d-model
+[2022.04.21-15.13.20:833][177]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 1
+[2022.04.21-15.13.20:833][177]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2022.04.21-15.13.22:648][338]LogShaderCompilers: Display: Worker (3/3): shaders left to compile 13
+[2022.04.21-15.13.22:648][338]LogShaderCompilers: Display: Started 5 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.23:029][370]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 8
+[2022.04.21-15.13.23:029][370]LogShaderCompilers: Display: Started 3 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.23:351][398]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 5
+[2022.04.21-15.13.23:351][398]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.24:996][544]LogSlate: Window '3d-model' being destroyed
+[2022.04.21-15.13.25:008][544]LogSlate: Window '3d-model' being destroyed
+[2022.04.21-15.13.25:011][544]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2022.04.21-15.13.25:011][544]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.04.21-15.13.26:689][703]LogShaderCompilers: Display: Worker (1/3): shaders left to compile 3
+[2022.04.21-15.13.26:689][703]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.27:439][771]LogShaderCompilers: Display: Worker (2/3): shaders left to compile 1
+[2022.04.21-15.13.27:439][771]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2022.04.21-15.13.28:880][922]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2022.04.21-15.13.29:549][  1]Cmd: DELETE
+[2022.04.21-15.13.29:549][  1]Cmd: ACTOR DELETE
+[2022.04.21-15.13.29:552][  1]LogEditorActor: Deleted Actor: BP_Sky_Sphere_C
+[2022.04.21-15.13.29:561][  1]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.04.21-15.13.29:564][  1]LogEditorActor: Deleted 1 Actors (0.015 secs)
+[2022.04.21-15.13.30:966][169]Cmd: TRANSACTION UNDO
+[2022.04.21-15.13.30:966][169]LogEditorTransaction: Undo Delete Actors
+[2022.04.21-15.13.31:260][177]Cmd: TRANSACTION UNDO
+[2022.04.21-15.13.31:260][177]LogEditorTransaction: Undo Clicking on Actors
+[2022.04.21-15.13.31:651][203]Cmd: TRANSACTION UNDO
+[2022.04.21-15.13.31:652][203]LogEditorTransaction: Undo Create Actors
+[2022.04.21-15.13.38:108][930]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2022.04.21-15.13.39:395][930]LogSlate: Window 'Delete Assets' being destroyed
+[2022.04.21-15.13.39:664][930]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2022.04.21-15.13.39:676][930]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2022.04.21-15.13.39:682][930]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2022.04.21-15.13.39:833][930]SourceControl: rm 'MyProject/Content/MyAssets/TV/3d-model.uasset'
+[2022.04.21-15.17.35:872][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2022.04.21-15.17.35:933][224]LogSavePackage: Moving '../../../../../Exjobb/MyProject/Saved/Minimal_Default7D4A7BD94431E345B56C16AA5CD597F6.tmp' to '../../../../../Exjobb/MyProject/Content/StarterContent/Maps/Minimal_Default.umap'
+[2022.04.21-15.17.35:948][224]AssetCheck: New page: Asset Save: Minimal_Default
+[2022.04.21-15.17.35:948][224]LogContentValidation: Display: Validating World /Game/StarterContent/Maps/Minimal_Default.Minimal_Default
