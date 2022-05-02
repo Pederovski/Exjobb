@@ -23,14 +23,23 @@
         <form autocomplete="off">
             <div class="puzzle3settings">
                 <img src="icons/eye_white.png" width="25" height="25">
-                <input class ="puzzle3input" id="visualhourinput" type ="number">
+                <input class ="puzzle3input" id="visualhourinput" type ="number"
+                 oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                 maxlength = "2"
+                >
                 :
-                <input class ="puzzle3input" id="visualminuteinput" type ="number">
+                <input class ="puzzle3input" id="visualminuteinput" type ="number" maxlength="2"
+                oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                >
                 <br>
                 <img src="icons/volume_white.png" width="25" height="25">
-                <input class ="puzzle3input" id="audiblehourinput" type ="number">
+                <input class ="puzzle3input" id="audiohourinput" type ="number" maxlength="2"
+                oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                >
                 :
-                <input class ="puzzle3input" id="audibleminuteinput" type ="number">
+                <input class ="puzzle3input" id="audiominuteinput" type ="number" maxlength="2"
+                oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                >
             </div>
             <div>
                 <button type="button" id="puzzle3button" onclick="submitPuzzle3()">Check</button>
@@ -62,11 +71,11 @@
             var visual_hour = document.getElementById('visualhourinput').value;
             var visual_minute = document.getElementById('visualminuteinput').value;
 
-            var audible_hour = document.getElementById('audiblehourinput').value;
-            var audible_minute = document.getElementById('audibleminuteinput').value;
+            var audio_hour = document.getElementById('audiohourinput').value;
+            var audio_minute = document.getElementById('audiominuteinput').value;
             
-            console.log(visual_hour + visual_minute + " " + audible_hour + audible_minute);
-            socket.send(visual_hour + visual_minute + " " + audible_hour + audible_minute);
+            console.log(visual_hour + visual_minute + " " + audio_hour + audio_minute);
+            socket.send(visual_hour + visual_minute + " " + audio_hour + audio_minute);
 
             // Clear input field after submit
             document.getElementById('puzzle3input1').value = '';

@@ -23,9 +23,15 @@
         <div>
             <form autocomplete="off">
                 <div>
-                    <input id="puzzle2input1" type ="number">
+                    <input id="puzzle2input1" type ="number"
+                     oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                     maxlength = "2"
+                    >
                     <br>
-                    <input id="puzzle2input2" type ="number">
+                    <input id="puzzle2input2" type ="number" 
+                     oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                     maxlength = "2"
+                    >
                 </div>
                 <div>
                     <button type="button" id="puzzle2button" onclick="submitPuzzle2()">Check</button>

@@ -22,7 +22,10 @@
         </div>
         <div>
             <form autocomplete="off">
-                <input id="puzzle1input" type ="number">
+                <input id="puzzle1input"
+                 oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                 type ="number" maxlength = "6"
+                >
                 <button type="button" id="puzzle1button" onclick="submitPuzzle1()">Check</button>
                 <br><br>
             </form>
