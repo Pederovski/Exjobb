@@ -21,10 +21,16 @@
             <br><br><br>
         </div>
         <form autocomplete="off">
-            <div>
-                <input id="puzzle3input1" type ="number">
+            <div class="puzzle3settings">
+                <img src="icons/eye_white.png" width="25" height="25">
+                <input class ="puzzle3input" id="visualhourinput" type ="number">
+                :
+                <input class ="puzzle3input" id="visualminuteinput" type ="number">
                 <br>
-                <input id="puzzle3input2" type ="number">
+                <img src="icons/volume_white.png" width="25" height="25">
+                <input class ="puzzle3input" id="audiblehourinput" type ="number">
+                :
+                <input class ="puzzle3input" id="audibleminuteinput" type ="number">
             </div>
             <div>
                 <button type="button" id="puzzle3button" onclick="submitPuzzle3()">Check</button>
@@ -53,16 +59,18 @@
         }
         // Send puzzle input to Unreal
         function submitPuzzle3() {
-            var puzzle3_1 = document.getElementById('puzzle3input1').value;
-            var puzzle3_2 = document.getElementById('puzzle3input2').value;
-            //var puzzle3_3 = document.getElementById('puzzle3input3').value;
-            console.log(puzzle3_1 + " " + puzzle3_2); //  + " " + puzzle3_3
-            socket.send(puzzle3_1 + " " + puzzle3_2); //  + " " + puzzle3_3
+            var visual_hour = document.getElementById('visualhourinput').value;
+            var visual_minute = document.getElementById('visualminuteinput').value;
+
+            var audible_hour = document.getElementById('audiblehourinput').value;
+            var audible_minute = document.getElementById('audibleminuteinput').value;
+            
+            console.log(visual_hour + visual_minute + " " + audible_hour + audible_minute);
+            socket.send(visual_hour + visual_minute + " " + audible_hour + audible_minute);
 
             // Clear input field after submit
             document.getElementById('puzzle3input1').value = '';
             document.getElementById('puzzle3input2').value = '';
-            //document.getElementById('puzzle3input3').value = '';
         }
     </script>
     <section>

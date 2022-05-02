@@ -85,6 +85,11 @@ input {
     margin: 10px;
 }
 
+.puzzle3input {
+    height: 30px;
+    width: 50px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -110,6 +115,11 @@ form {
     flex-direction: row;
     display: inline;
     align-items: center;
+}
+
+.puzzle3settings {
+    font-size: 30px;
+    color: white;
 }
 
 .puzzle13 {
