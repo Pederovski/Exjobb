@@ -1,8 +1,8 @@
-C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
-C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Source\MyProject\WebSocketGameInstance.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Online\WebSockets\Public\IWebSocket.h
-C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\WebSocketGameInstance.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Online\WebSockets\Public\WebSocketsModule.h
+C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Source\MyProject\WebSocketGameInstance.h
+C:\UE_4.27\Engine\Source\Runtime\Online\WebSockets\Public\IWebSocket.h
+C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\WebSocketGameInstance.generated.h
+C:\UE_4.27\Engine\Source\Runtime\Online\WebSockets\Public\WebSocketsModule.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\string
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xstring
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\iosfwd

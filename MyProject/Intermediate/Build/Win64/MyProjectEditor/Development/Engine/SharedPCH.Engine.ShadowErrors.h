@@ -1,4 +1,4 @@
-// PCH for E:\Unreal\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h
+// PCH for C:\UE_4.27\Engine\Source\Runtime\Engine\Public\EngineSharedPCH.h
 #define IS_PROGRAM 0
 #define UE_EDITOR 1
 #define ENABLE_PGO_PROFILE 0
@@ -288,5 +288,4 @@
 #define WITH_CUSTOM_SQ_STRUCTURE 0
 #define WITH_IMMEDIATE_PHYSX 0
 #define CLOTHINGSYSTEMRUNTIMEINTERFACE_API DLLIMPORT
-#include "E:/Unreal/Epic Games/UE_4.27/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h"
-//#include "C:/UE_4.27/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h"
+#include "C:/UE_4.27/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h"
