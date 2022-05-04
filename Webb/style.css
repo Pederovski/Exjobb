@@ -85,6 +85,11 @@ input {
     margin: 10px;
 }
 
+.puzzle2input {
+    height: 30px;
+    width: 55px;
+}
+
 .puzzle3input {
     height: 30px;
     width: 50px;

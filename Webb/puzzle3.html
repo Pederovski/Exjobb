@@ -23,22 +23,25 @@
         <form autocomplete="off">
             <div class="puzzle3settings">
                 <img src="icons/eye_white.png" width="25" height="25">
-                <input class ="puzzle3input" id="visualhourinput" type ="number"
+                <input class ="puzzle3input" id="visualhourinput" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                  oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                  maxlength = "2"
                 >
                 :
-                <input class ="puzzle3input" id="visualminuteinput" type ="number" maxlength="2"
+                <input class ="puzzle3input" id="visualminuteinput" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                 oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="2"
                 >
                 <br>
                 <img src="icons/volume_white.png" width="25" height="25">
-                <input class ="puzzle3input" id="audiohourinput" type ="number" maxlength="2"
+                <input class ="puzzle3input" id="audiohourinput" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                 oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="2"
                 >
                 :
-                <input class ="puzzle3input" id="audiominuteinput" type ="number" maxlength="2"
+                <input class ="puzzle3input" id="audiominuteinput" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                 oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="2"
                 >
             </div>
             <div>
@@ -48,6 +51,20 @@
     </section>
     <script>
         console.log("Entered Puzzle3 script\n");
+
+        // Remove + -
+        function removePlusMinus(input) {
+            var regex = /[^0-9]/gi;
+            input.value = input.value.replace(regex, "");
+        }
+        function isInputNumber(evt) {
+            var ch = String.fromCharCode(evt.which);
+
+            if(!(/[^0-9]/.test(ch))) {
+                evt.preventDefault();
+            }
+        }
+
         var socket = new WebSocket('ws://localhost:5000');
         socket.onopen = function(event) {
             console.log('Connection open in Puzzle3');

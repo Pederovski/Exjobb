@@ -12,7 +12,6 @@
 
 
 // ---  HTML SERVER  ---------------------------------------------------
-//const express = require("express");
 const http = require('http');
 const fs = require('fs');
 var path = require('path');
@@ -20,8 +19,7 @@ var path = require('path');
 let connection = null;
 
 /**/const httpserver = http.createServer(function(request, response) {
-  //response.writeHead(200, {'content-type':'text/html'});
-  //fs.createReadStream('index.html').pipe(response);
+
   console.log('request', request.url);
 
   var filePath = '.' + request.url;
@@ -71,9 +69,6 @@ let connection = null;
 
 // ---  WEBSOCKET SERVER  -----------------------------------------------
 const WebSocket = require('ws');
-//const PORT = process.env.PORT || 5000;
-//const app = express().use(express.static(__dirname));
-//const server = http.createServer(app);
 const webSocketServer = new WebSocket.Server({ port: 5000 });
 // { port: 5000 }
 // {server}
@@ -100,10 +95,6 @@ webSocketServer.on('connection', (webSocketConnection) => {
     console.log('Received message from WebSocket client: %s.', message);
 
     wsConnection.send(message);
-
-    // testa att ta emot client's ip adress
-    //const ip = request.socket.remoteAddress;
-    //console.log('ip address: ' + ip);
   });
 
   webSocketConnection.send(`Hello, this is server speaking!`);
