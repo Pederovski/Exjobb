@@ -10,7 +10,9 @@ s.options.numOutputBusChannels_(1);
 (
 var filePath = thisProcess.nowExecutingPath.dirname;
 
-~b1 = Buffer.read(s, filePath +/+ "Pilot1Long.wav");
+~door = Buffer.read(s, filePath +/+ "DoorCreak_2.wav");
+
+~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
 )
 
 // 3. And run this code
@@ -39,20 +41,35 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 // 4. And run this code
 (
 
-~ambientsound = Synth.new(\audiofile, [\buf, ~b1.bufnum]);
+~ambientsound = Synth.new(\audiofile, [\buf, ~ambient.bufnum]);
+~doorsound = Synth.new(\audiofile, [\buf, ~door.bufnum]);
 
-~doorsound = Synth.new(\audiofile, [\buf, ~b1.bufnum]);
+OSCdef.new(\Door,
+	{
+		arg msg;
 
-OSCdef.new(\Gates,
+		// msg[1] = gate for door (0 or 1)
+		// msg[2] = amp for door (1)
+
+		("msg" + msg).postln;
+
+		~doorsound.set(\trig, msg[1]);
+		~doorsound.set(\amp, msg[2]);
+		//~doorsound.set(\pan, msg[3]);
+		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
+
+	},'/door');
+
+
+OSCdef.new(\Ambient,
 	{
 		arg msg;
 
 		("msg" + msg).postln;
 
 		~ambientsound.set(\gate, msg[1]);
-		~doorsound.set(\gate, msg[2]);
 
-	},'/gates');
+	},'/ambient');
 )
 
 // 5. (Optional), Manual gate test
