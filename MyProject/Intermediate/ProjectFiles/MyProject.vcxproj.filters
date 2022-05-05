@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\MyProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7D3A3FD1-1A42-4420-9A98-6ED9CC34D6D0}</UniqueIdentifier>
+      <UniqueIdentifier>{99C371A0-C2AD-466D-B22D-DD70237385E2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{ADAA83A3-C0B9-4278-9C12-574ED13432DD}</UniqueIdentifier>
+      <UniqueIdentifier>{9064F284-AF4C-4206-BE37-E7EBEF7B5297}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\MyProject">
-      <UniqueIdentifier>{842AE689-89D7-475F-918D-C0AF81C82DD2}</UniqueIdentifier>
+      <UniqueIdentifier>{49A54875-573B-4E60-9F03-0545C308DED7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\MyProject\MyActor.cpp">
       <Filter>Source\MyProject</Filter>

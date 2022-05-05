@@ -1,2 +1,2 @@
-E:\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
-E:\Unreal\Exjobb\MyProject\Source\MyProject\MyProject.h
+C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Source\MyProject\MyProject.h
