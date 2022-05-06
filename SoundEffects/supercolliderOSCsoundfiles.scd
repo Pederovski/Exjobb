@@ -2,7 +2,7 @@ NetAddr.langPort;
 NetAddr.localAddr;
 
 // 0. Run this if using 8 channels
-s.options.numOutputBusChannels_(8);
+s.options.numOutputBusChannels_(1);
 
 // 1. Start server (ctrl+b)
 
@@ -10,15 +10,19 @@ s.options.numOutputBusChannels_(8);
 (
 var filePath = thisProcess.nowExecutingPath.dirname;
 
-~door = Buffer.read(s, filePath +/+ "DoorCreak_2.wav");
-~clock = Buffer.read(s, filePath +/+ "ClockTicking_1.wav");
+~door1 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch1.wav");
+~door2 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch2.wav");
+~door3 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch3.wav");
+~door4 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch4.wav");
+~clock = Buffer.read(s, filePath +/+ "ClockTicking.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
-~electricity3 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_3.wav");
 ~flourescent = Buffer.read(s, filePath +/+ "Flourescent_SoundEffect.wav");
-~lightflickering = Buffer.read(s, filePath +/+ "Light Flickering Sound Effect.wav");
+~lightflickering = Buffer.read(s, filePath +/+ "Light_Flickering_Normalized.wav");
 ~ventilation1 = Buffer.read(s, filePath +/+ "Ventilation_1.wav");
 ~ventilation2 = Buffer.read(s, filePath +/+ "Ventilation_2.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
+~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
+
 )
 
 // 3. And run this code
@@ -26,7 +30,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 	SynthDef(\allSpeakers, {
 		arg gate=0, amp=1, pan=0, panSpeak=0, buf, trig=1, loop=1;
 		var sig, sig1, sig2, env;
-
++
 		env = EnvGen.kr(
 			Env.adsr(1.0,0.0,1.0,1.0),
 			gate,
@@ -70,10 +74,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 
 
 ~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum]);
-
-~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3,]);
-
-
+~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
 
 
 /*~electricity2sound = Synth.new(\trigsound, [\buf, ~electricity2.bufnum]);
@@ -83,25 +84,25 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~ventilation1sound = Synth.new(\trigsound, [\buf, ~ventilation1.bufnum]);
 ~ventilation2sound = Synth.new(\trigsound, [\buf, ~ventilation2.bufnum]);*/
 
-OSCdef.new(\Door,
+OSCdef.new(\Door1,
 	{
 		arg msg;
 
 		// msg[1] = gate for door (0 or 1)
 		// msg[2] = amp for door (1)
-		// msg[3] = pan (0-2), an position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
+		// msg[3] = pan (0-2), Pan position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
 
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~door.bufnum, \pan, msg[3]]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, msg[3]]);
 
 		//~doorsound.set(\trig, msg[1]);
 		//~doorsound.set(\amp, msg[2]);
 		//~doorsound.set(\pan, msg[3]);
 		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
 
-	},'/door');
+	},'/door1');
 
 OSCdef.new(\Elctric,
 	{
@@ -123,6 +124,25 @@ OSCdef.new(\Elctric,
 
 	},'/elctric');
 
+OSCdef.new(\Flourescent,
+	{
+		arg msg;
+
+		// msg[1] = gate for door (0 or 1)
+		// msg[2] = amp for door (1)
+		// msg[3] = pan (0-2), an position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
+
+
+		("msg" + msg).postln;
+
+		~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum, \amp, 0.2]);
+
+		~flourescentsound.set(\trig, msg[1]);
+		//~doorsound.set(\amp, msg[2]);
+		//~doorsound.set(\pan, msg[3]);
+		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
+
+	},'/flourescent');
 
 OSCdef.new(\Ambient,
 	{
@@ -130,7 +150,7 @@ OSCdef.new(\Ambient,
 
 		("msg" + msg).postln;
 
-		~ambientsound.set(\gate, msg[1]);
+		~ambientsound.set(\gate, msg[1], \amp, 0.2);
 
 	},'/ambient');
 )

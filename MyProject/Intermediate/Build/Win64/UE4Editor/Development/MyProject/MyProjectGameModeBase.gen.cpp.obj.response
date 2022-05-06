@@ -232,8 +232,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject
-/I C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Source
+/I C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject
+/I C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Source
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -263,12 +263,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyProjectGameModeBase.gen.cpp"
-/FI"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h"
-/Fo"C:\Users\IVA63\OneDrive\Dokument\Unreal\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\MyProjectGameModeBase.gen.cpp.obj"
+/FI"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyProjectGameModeBase.gen.cpp"
+/FI"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h"
+/Fo"C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\MyProjectGameModeBase.gen.cpp.obj"
 /TP
 /GR-
 /W4
