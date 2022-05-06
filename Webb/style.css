@@ -153,3 +153,20 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
+/* Rotate arrows */
+.rotate45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rotate125 {
+    -webkit-transform: rotate(125deg);
+    -moz-transform: rotate(125deg);
+    -o-transform: rotate(125deg);
+    -ms-transform: rotate(125deg);
+    transform: rotate(125deg);
+}
