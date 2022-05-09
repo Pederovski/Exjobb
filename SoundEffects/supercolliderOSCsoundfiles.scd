@@ -2,7 +2,7 @@ NetAddr.langPort;
 NetAddr.localAddr;
 
 // 0. Run this if using 8 channels
-s.options.numOutputBusChannels_(1);
+s.options.numOutputBusChannels_(8);
 
 // 1. Start server (ctrl+b)
 
@@ -30,7 +30,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 	SynthDef(\allSpeakers, {
 		arg gate=0, amp=1, pan=0, panSpeak=0, buf, trig=1, loop=1;
 		var sig, sig1, sig2, env;
-+
+
 		env = EnvGen.kr(
 			Env.adsr(1.0,0.0,1.0,1.0),
 			gate,
@@ -76,6 +76,8 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum]);
 ~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
 
+~ampFlourescent = 1.4;
+~panFlourescent = 2/4;
 
 /*~electricity2sound = Synth.new(\trigsound, [\buf, ~electricity2.bufnum]);
 ~electricity3sound = Synth.new(\trigsound, [\buf, ~electricity3.bufnum]);
@@ -95,7 +97,14 @@ OSCdef.new(\Door1,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, msg[3]]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 1/4]);
+
+		~ampFlourescent = 0;
+		~panFlourescent = 5/4;
+
+
+		//free
+		//~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, 2/4, \amp, 1.4]);
 
 		//~doorsound.set(\trig, msg[1]);
 		//~doorsound.set(\amp, msg[2]);
@@ -104,23 +113,46 @@ OSCdef.new(\Door1,
 
 	},'/door1');
 
+OSCdef.new(\Door2,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door2.bufnum, \pan, 2/4]);
+
+	},'/door2');
+
+OSCdef.new(\Door3,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
+
+	},'/door3');
+
+OSCdef.new(\Door4,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door4.bufnum, \pan, 0]);
+
+		~panflickering = 2/4;
+
+	},'/door4');
+
+
 OSCdef.new(\Elctric,
 	{
 		arg msg;
 
-		// msg[1] = gate for door (0 or 1)
-		// msg[2] = amp for door (1)
-		// msg[3] = pan (0-2), an position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
-
-
 		("msg" + msg).postln;
 
 		~electricity2sound = Synth.new(\trigsound, [\buf, ~electricity2.bufnum]);
-
-		//~doorsound.set(\trig, msg[1]);
-		//~doorsound.set(\amp, msg[2]);
-		//~doorsound.set(\pan, msg[3]);
-		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
 
 	},'/elctric');
 
@@ -128,21 +160,25 @@ OSCdef.new(\Flourescent,
 	{
 		arg msg;
 
-		// msg[1] = gate for door (0 or 1)
-		// msg[2] = amp for door (1)
-		// msg[3] = pan (0-2), an position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
-
+		~flourescentsound.free;
 
 		("msg" + msg).postln;
 
-		~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum, \amp, 0.2]);
-
-		~flourescentsound.set(\trig, msg[1]);
-		//~doorsound.set(\amp, msg[2]);
-		//~doorsound.set(\pan, msg[3]);
-		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
+		~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, ~panFlourescent, \amp, ~ampFlourescent]);
 
 	},'/flourescent');
+
+OSCdef.new(\Lightflickering,
+	{
+		arg msg;
+
+		//~lightflickering.free;
+
+		("msg" + msg).postln;
+
+		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~lightflickering.bufnum,\pan, msg[1], \amp, 0.2]);
+
+	},'/lightflickering');
 
 OSCdef.new(\Ambient,
 	{
@@ -150,7 +186,7 @@ OSCdef.new(\Ambient,
 
 		("msg" + msg).postln;
 
-		~ambientsound.set(\gate, msg[1], \amp, 0.2);
+		~ambientsound.set(\gate, msg[1], \amp, 1);
 
 	},'/ambient');
 )
