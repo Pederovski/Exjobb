@@ -17,7 +17,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~clock = Buffer.read(s, filePath +/+ "ClockTicking.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
 ~flourescent = Buffer.read(s, filePath +/+ "Flourescent_SoundEffect.wav");
-~lightflickering = Buffer.read(s, filePath +/+ "Light_Flickering_Normalized.wav");
+~lightflickering = Buffer.read(s, filePath +/+ "Short_Light_Flick.wav");
 ~ventilation1 = Buffer.read(s, filePath +/+ "Ventilation_1.wav");
 ~ventilation2 = Buffer.read(s, filePath +/+ "Ventilation_2.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
@@ -76,9 +76,11 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum]);
 ~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
 
-~ampFlourescent = 1.4;
+~ampFlourescent = 0;
 ~panFlourescent = 2/4;
 
+~ampFlickering = 0.5;
+~panFlickering = 2/4;
 /*~electricity2sound = Synth.new(\trigsound, [\buf, ~electricity2.bufnum]);
 ~electricity3sound = Synth.new(\trigsound, [\buf, ~electricity3.bufnum]);
 ~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum]);
@@ -99,9 +101,8 @@ OSCdef.new(\Door1,
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 1/4]);
 
-		~ampFlourescent = 0;
-		~panFlourescent = 5/4;
-
+		~ampFlickering = 0.2;
+		~panFlickering = 5/4;
 
 		//free
 		//~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, 2/4, \amp, 1.4]);
@@ -121,6 +122,10 @@ OSCdef.new(\Door2,
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door2.bufnum, \pan, 2/4]);
 
+
+		~ampFlickering = 0;
+		~panFlickering = 0;
+
 	},'/door2');
 
 OSCdef.new(\Door3,
@@ -131,6 +136,9 @@ OSCdef.new(\Door3,
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
 
+		~ampFlickering = 0;
+		~panFlickering = 0;
+
 	},'/door3');
 
 OSCdef.new(\Door4,
@@ -140,8 +148,8 @@ OSCdef.new(\Door4,
 		("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door4.bufnum, \pan, 0]);
-
-		~panflickering = 2/4;
+		~ampFlickering = 0.5;
+		~panFlickering = 2/4;
 
 	},'/door4');
 
@@ -168,6 +176,18 @@ OSCdef.new(\Flourescent,
 
 	},'/flourescent');
 
+OSCdef.new(\FlourescentPuzzle1,
+	{
+		arg msg;
+
+		~flourescentsound.free;
+
+		("msg" + msg).postln;
+
+		~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, msg[1], \amp, 1.4]);
+
+	},'/flourescentPuzzle1');
+
 OSCdef.new(\Lightflickering,
 	{
 		arg msg;
@@ -176,7 +196,9 @@ OSCdef.new(\Lightflickering,
 
 		("msg" + msg).postln;
 
-		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~lightflickering.bufnum,\pan, msg[1], \amp, 0.2]);
+		//(~ampFlickering).postln;
+
+		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~lightflickering.bufnum,\pan, ~panFlickering, \amp, ~ampFlickering]);
 
 	},'/lightflickering');
 
