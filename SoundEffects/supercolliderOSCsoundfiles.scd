@@ -16,6 +16,8 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~door4 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch4.wav");
 ~clock = Buffer.read(s, filePath +/+ "ClockTicking.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
+
+~flourescentShort = Buffer.read(s, filePath +/+ "Flourescent_Short.wav");
 ~flourescent = Buffer.read(s, filePath +/+ "Flourescent_SoundEffect.wav");
 ~lightflickering = Buffer.read(s, filePath +/+ "Short_Light_Flick.wav");
 ~ventilation1 = Buffer.read(s, filePath +/+ "Ventilation_1.wav");
@@ -79,8 +81,19 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~ampFlourescent = 0;
 ~panFlourescent = 2/4;
 
-~ampFlickering = 0.5;
-~panFlickering = 2/4;
+~ampFlickeringControlRoom = 2;
+~panFlickeringControlRoom = 2/4;
+
+~ampFlickeringPuzzle1 = 0;
+~panFlickeringPuzzle1 = 4/4;
+
+~ampFlickeringPuzzle1Bulb = 0;
+~panFlickeringPuzzle1Bulb = 3/4;
+
+~ampVentilationPuzzle1 = 0;
+~panVentilationPuzzle1 = 3.5/4;
+
+
 /*~electricity2sound = Synth.new(\trigsound, [\buf, ~electricity2.bufnum]);
 ~electricity3sound = Synth.new(\trigsound, [\buf, ~electricity3.bufnum]);
 ~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum]);
@@ -101,9 +114,10 @@ OSCdef.new(\Door1,
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 1/4]);
 
-		~ampFlickering = 0.2;
-		~panFlickering = 5/4;
-
+		~ampFlickeringControlRoom = 0;
+		~ampFlickeringPuzzle1 = 0.3;
+		~ampFlickeringPuzzle1Bulb = 0.5;
+		~ampVentilationPuzzle1 = 0.1;
 		//free
 		//~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, 2/4, \amp, 1.4]);
 
@@ -123,9 +137,10 @@ OSCdef.new(\Door2,
 		~doorsound = Synth.new(\trigsound, [\buf, ~door2.bufnum, \pan, 2/4]);
 
 
-		~ampFlickering = 0;
-		~panFlickering = 0;
-
+		~ampFlickeringControlRoom = 0;
+		~ampFlickeringPuzzle1 = 0;
+		~ampFlickeringPuzzle1Bulb = 0;
+		~ampVentilationPuzzle1 = 0;
 	},'/door2');
 
 OSCdef.new(\Door3,
@@ -136,9 +151,10 @@ OSCdef.new(\Door3,
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
 
-		~ampFlickering = 0;
-		~panFlickering = 0;
-
+		~ampFlickeringControlRoom = 0;
+		~ampFlickeringPuzzle1 = 0;
+		~ampFlickeringPuzzle1Bulb = 0;
+		~ampVentilationPuzzle1 = 0;
 	},'/door3');
 
 OSCdef.new(\Door4,
@@ -148,9 +164,10 @@ OSCdef.new(\Door4,
 		("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door4.bufnum, \pan, 0]);
-		~ampFlickering = 0.5;
-		~panFlickering = 2/4;
-
+		~ampFlickeringControlRoom = 1.4;
+		~ampFlickeringPuzzle1 = 0;
+		~ampFlickeringPuzzle1Bulb = 0;
+		~ampVentilationPuzzle1 = 0;
 	},'/door4');
 
 
@@ -180,15 +197,13 @@ OSCdef.new(\FlourescentPuzzle1,
 	{
 		arg msg;
 
-		~flourescentsound.free;
-
 		("msg" + msg).postln;
 
-		~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, msg[1], \amp, 1.4]);
+		~flourescentsoundShort = Synth.new(\trigsound, [\buf, ~flourescentShort.bufnum,\pan, msg[1], \amp, 1.4]);
 
 	},'/flourescentPuzzle1');
 
-OSCdef.new(\Lightflickering,
+OSCdef.new(\LightflickeringPuzzle1Bulb,
 	{
 		arg msg;
 
@@ -196,11 +211,33 @@ OSCdef.new(\Lightflickering,
 
 		("msg" + msg).postln;
 
-		//(~ampFlickering).postln;
+		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~lightflickering.bufnum,\pan, ~panFlickeringPuzzle1Bulb, \amp, ~ampFlickeringPuzzle1Bulb]);
 
-		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~lightflickering.bufnum,\pan, ~panFlickering, \amp, ~ampFlickering]);
+	},'/lightflickeringPuzzle1Bulb');
 
-	},'/lightflickering');
+OSCdef.new(\VentilationPuzzle1,
+	{
+		arg msg;
+
+		//~lightflickering.free;
+
+		("msg" + msg).postln;
+
+		~ventilationSound = Synth.new(\trigsound, [\buf, ~ventilation1.bufnum,\pan, ~panVentilationPuzzle1, \amp, ~ampVentilationPuzzle1]);
+
+	},'/ventilationPuzzle1');
+
+OSCdef.new(\LightflickeringControlRoom,
+	{
+		arg msg;
+
+		//~lightflickering.free;
+
+		("msg" + msg).postln;
+
+		~lightflickeringsound = Synth.new(\trigsound, [\buf, ~flourescentShort.bufnum,\pan, ~panFlickeringControlRoom, \amp, ~ampFlickeringControlRoom]);
+
+	},'/lightflickeringControlRoom');
 
 OSCdef.new(\Ambient,
 	{
