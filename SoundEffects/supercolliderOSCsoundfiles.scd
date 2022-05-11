@@ -15,6 +15,8 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~door3 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch3.wav");
 ~door4 = Buffer.read(s, filePath +/+ "DoorCreak_2_pitch4.wav");
 ~clock = Buffer.read(s, filePath +/+ "ClockTicking.wav");
+~p2_HighPitch = Buffer.read(s, filePath +/+ "P2_HighPitch.wav");
+~p2_LowPitch = Buffer.read(s, filePath +/+ "P2_LowPitch.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
 
 ~flourescentShort = Buffer.read(s, filePath +/+ "Flourescent_Short.wav");
@@ -275,7 +277,7 @@ OSCdef.new(\CodeHigh,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p2_HighPitch.bufnum, \pan, (msg[1]-1.5)/4.0]);
 
 	},'/codeHigh');
 
@@ -285,7 +287,7 @@ OSCdef.new(\CodeLow,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p2_LowPitch.bufnum, \pan, (msg[1]-1.5)/4.0]);
 
 	},'/codeLow');
 
