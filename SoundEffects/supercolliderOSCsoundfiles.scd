@@ -248,6 +248,47 @@ OSCdef.new(\Ambient,
 		~ambientsound.set(\gate, msg[1], \amp, 1);
 
 	},'/ambient');
+
+OSCdef.new(\ClockMinute,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+
+	},'/clockMinute');
+
+OSCdef.new(\ClockHour,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+
+	},'/clockHour');
+
+OSCdef.new(\CodeHigh,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+
+	},'/codeHigh');
+
+OSCdef.new(\CodeLow,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, (msg[1]+1)/4]);
+
+	},'/codeLow');
+
 )
 
 // 5. (Optional), Manual gate test
