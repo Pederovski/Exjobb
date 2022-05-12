@@ -3,7 +3,7 @@
 
 // 1. Open command prompt (cmd) & set directory
 // 2. Run "node app.js" to start server in cmd
-// 3. Open website in Chrome "localhost:3000"
+// (3. Open website in Chrome "localhost:3000")
 // 4. Start game session in Unreal engine
 // 5. When entering any of the puzzles, a message 
 //    should be sent to console & to Unreal if all is correct
@@ -71,7 +71,6 @@ let connection = null;
 const WebSocket = require('ws');
 const webSocketServer = new WebSocket.Server({ port: 5000 });
 // { port: 5000 }
-// {server}
 // 192.168.233.28:5000
 
 var wsConnection;
