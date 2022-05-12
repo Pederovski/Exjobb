@@ -97,7 +97,7 @@ webSocketServer.on('connection', (webSocketConnection) => {
     wsConnection.send(message);
   });
 
-  webSocketConnection.send(`Hello, this is server speaking!`);
+  //webSocketConnection.send(`Hello, this is server speaking!`);
 });
 
 /*server.listen(PORT, () => {

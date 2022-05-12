@@ -2,7 +2,7 @@ NetAddr.langPort;
 NetAddr.localAddr;
 
 // 0. Run this if using 8 channels
-s.options.numOutputBusChannels_(1);
+s.options.numOutputBusChannels_(2);
 
 // 1. Start server (ctrl+b)
 
@@ -30,9 +30,9 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
 
 ~correct = Buffer.read(s, filePath +/+ "Correct_Code.wav");
-~wrong = Buffer.read(s, filePath +/+ "Wrong_Code.wav");
+~wrong = Buffer.read(s, filePath +/+ "Wrong_Code2.wav");
 
-
+~complete = Buffer.read(s, filePath +/+ "Applause.wav");
 )
 
 // 3. And run this code
@@ -319,6 +319,15 @@ OSCdef.new(\WrongSound,
 
 	},'/wrongSound');
 
+OSCdef.new(\Complete,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~complete.bufnum, \amp, 1]);
+
+	},'/complete');
 
 )
 
