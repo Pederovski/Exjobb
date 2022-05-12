@@ -2,7 +2,7 @@ NetAddr.langPort;
 NetAddr.localAddr;
 
 // 0. Run this if using 8 channels
-s.options.numOutputBusChannels_(8);
+s.options.numOutputBusChannels_(1);
 
 // 1. Start server (ctrl+b)
 
@@ -28,6 +28,10 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~ventilation2 = Buffer.read(s, filePath +/+ "Ventilation_2.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
+
+~correct = Buffer.read(s, filePath +/+ "Correct_Code.wav");
+~wrong = Buffer.read(s, filePath +/+ "Wrong_Code.wav");
+
 
 )
 
@@ -79,7 +83,9 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 (
 
 
-~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum]);
+~ampClockTickingPuzzle3 = 0;
+
+~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum, \amp, ~ampClockTickingPuzzle3]);
 ~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
 
 ~ampFlourescent = 0;
@@ -109,11 +115,6 @@ OSCdef.new(\Door1,
 	{
 		arg msg;
 
-		// msg[1] = gate for door (0 or 1)
-		// msg[2] = amp for door (1)
-		// msg[3] = pan (0-2), Pan position (kr or ar). Channels are evenly spaced over a cyclic period of 2.0 in pos with 0.0 equal to channel zero and 2.0/numChans equal to channel 1, 4.0/numChans equal to channel 2, etc.
-
-
 		("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 1/4]);
@@ -122,13 +123,6 @@ OSCdef.new(\Door1,
 		~ampFlickeringPuzzle1 = 0.3;
 		~ampFlickeringPuzzle1Bulb = 0.5;
 		~ampVentilationPuzzle1 = 0.1;
-		//free
-		//~flourescentsound = Synth.new(\trigsound, [\buf, ~flourescent.bufnum,\pan, 2/4, \amp, 1.4]);
-
-		//~doorsound.set(\trig, msg[1]);
-		//~doorsound.set(\amp, msg[2]);
-		//~doorsound.set(\pan, msg[3]);
-		//~doorsound.set(\pan, 0, \panSpeak, [0,2]);
 
 	},'/door1');
 
@@ -159,6 +153,7 @@ OSCdef.new(\Door3,
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
 		~ampVentilationPuzzle1 = 0;
+		~ampClockTickingPuzzle3 = 1;
 	},'/door3');
 
 OSCdef.new(\Door4,
@@ -172,6 +167,7 @@ OSCdef.new(\Door4,
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
 		~ampVentilationPuzzle1 = 0;
+		~ampClockTickingPuzzle3 = 0;
 	},'/door4');
 
 
@@ -253,6 +249,16 @@ OSCdef.new(\Ambient,
 
 	},'/ambient');
 
+OSCdef.new(\ClockTicking,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~clocksound.set(\gate, msg[1], \amp, ~ampClockTickingPuzzle3);
+
+	},'/clockTickingPuzzle3');
+
 OSCdef.new(\ClockMinute,
 	{
 		arg msg;
@@ -292,6 +298,27 @@ OSCdef.new(\CodeLow,
 		~doorsound = Synth.new(\trigsound, [\buf, ~p2_LowPitch.bufnum, \pan, (msg[1]-1.5)/4.0]);
 
 	},'/codeLow');
+
+OSCdef.new(\CorrectSound,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~correct.bufnum, \amp, 1]);
+
+	},'/correctSound');
+
+OSCdef.new(\WrongSound,
+	{
+		arg msg;
+
+		("msg" + msg).postln;
+
+		~doorsound = Synth.new(\trigsound, [\buf, ~wrong.bufnum, \amp, 1]);
+
+	},'/wrongSound');
+
 
 )
 
