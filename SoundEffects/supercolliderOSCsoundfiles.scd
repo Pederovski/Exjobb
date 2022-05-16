@@ -2,7 +2,7 @@ NetAddr.langPort;
 NetAddr.localAddr;
 
 // 0. Run this if using 8 channels
-s.options.numOutputBusChannels_(2);
+s.options.numOutputBusChannels_(8);
 
 // 1. Start server (ctrl+b)
 
@@ -87,6 +87,9 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 
 ~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum, \amp, ~ampClockTickingPuzzle3]);
 ~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
+~completesound = Synth.new(\allSpeakers, [\buf, ~complete.bufnum, \amp, 0.5]);
+~wrongsound = Synth.new(\allSpeakers, [\buf, ~wrong.bufnum, \amp, 0.5]);
+~correctsound = Synth.new(\allSpeakers, [\buf, ~correct.bufnum, \amp, 0.5]);
 
 ~ampFlourescent = 0;
 ~panFlourescent = 2/4;
@@ -265,7 +268,7 @@ OSCdef.new(\ClockMinute,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \amp, 1.5, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockMinute');
 
@@ -275,7 +278,7 @@ OSCdef.new(\ClockHour,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \amp, 1.5, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockHour');
 
@@ -305,7 +308,8 @@ OSCdef.new(\CorrectSound,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~correct.bufnum, \amp, 1]);
+		//~correctsound.set(\gate, 1, \amp, 1);
+		~doorsound = Synth.new(\trigsound, [\buf, ~correct.bufnum, \amp, 2]);
 
 	},'/correctSound');
 
@@ -315,7 +319,7 @@ OSCdef.new(\WrongSound,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~wrong.bufnum, \amp, 1]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~wrong.bufnum, \amp, 2]);
 
 	},'/wrongSound');
 
@@ -325,7 +329,7 @@ OSCdef.new(\Complete,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~complete.bufnum, \amp, 1]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~complete.bufnum, \amp, 2]);
 
 	},'/complete');
 
