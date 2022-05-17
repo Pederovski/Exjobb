@@ -20,7 +20,6 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~p3_HighPitch = Buffer.read(s, filePath +/+ "P3_HighPitch.wav");
 ~p3_LowPitch = Buffer.read(s, filePath +/+ "P3_LowPitch.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
-
 ~flourescentShort = Buffer.read(s, filePath +/+ "Flourescent_Short.wav");
 ~flourescent = Buffer.read(s, filePath +/+ "Flourescent_SoundEffect.wav");
 ~lightflickering = Buffer.read(s, filePath +/+ "Short_Light_Flick.wav");
@@ -28,10 +27,8 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~ventilation2 = Buffer.read(s, filePath +/+ "Ventilation_2.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
 ~ambient = Buffer.read(s, filePath +/+ "Ambient_sound.wav");
-
 ~correct = Buffer.read(s, filePath +/+ "Correct_Code.wav");
 ~wrong = Buffer.read(s, filePath +/+ "Wrong_Code2.wav");
-
 ~complete = Buffer.read(s, filePath +/+ "Applause.wav");
 )
 
