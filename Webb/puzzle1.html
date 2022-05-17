@@ -22,7 +22,8 @@
         </div>
         <div>
             <form autocomplete="off">
-                <input id="puzzle1input" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
+                <input id="puzzle1input" type ="text" placeholder="XXXXXX"
+                 onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                  oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                  maxlength = "6"
                 >
@@ -63,7 +64,7 @@
             trigButton.disabled = true;
             setTimeout(function() {
             trigButton.disabled = false;
-            }, 5000);
+            }, 3000);
         }
         // Send puzzle input to Unreal
         function submitPuzzle1() {
