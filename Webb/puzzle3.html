@@ -80,6 +80,12 @@
             console.log("Triggered puzzle 3");
             socket.send("TriggerPuzzle3");
 
+            // Clear input field after triggering
+            document.getElementById('visualhourinput').value = '';
+            document.getElementById('visualminuteinput').value = '';
+            document.getElementById('audiohourinput').value = '';
+            document.getElementById('audiominuteinput').value = '';
+            
             // Disable button for a few seconds after clicking
             const trigButton = document.getElementById('triggerpuzzle3button');
             trigButton.disabled = true;
@@ -97,10 +103,6 @@
             
             console.log(visual_hour + visual_minute + " " + audio_hour + audio_minute);
             socket.send(visual_hour + visual_minute + " " + audio_hour + audio_minute);
-
-            // Clear input field after submit
-            document.getElementById('puzzle3input1').value = '';
-            document.getElementById('puzzle3input2').value = '';
         }
     </script>
     <br>

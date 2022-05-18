@@ -69,6 +69,10 @@
             console.log("Trigger puzzle 2");
             socket.send("TriggerPuzzle2");
 
+            // Clear input field after triggering
+            document.getElementById('puzzle2input1').value = '';
+            document.getElementById('puzzle2input2').value = '';
+
             // Disable button for a few seconds after clicking
             const trigButton = document.getElementById('triggerpuzzle2button');
             trigButton.disabled = true;
@@ -83,10 +87,6 @@
             var puzzle2_2 = document.getElementById('puzzle2input2').value;
             console.log(puzzle2_1 + "+" + puzzle2_2);
             socket.send(puzzle2_1 + "+" + puzzle2_2);
-
-            // Clear input field after submit
-            document.getElementById('puzzle2input1').value = '';
-            document.getElementById('puzzle2input2').value = '';
         }
     </script>
     <br>
