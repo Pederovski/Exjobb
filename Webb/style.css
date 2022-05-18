@@ -2,6 +2,11 @@
     font-family: 'Montserrat';
 }
 
+@font-face {
+    font-family: digital;
+    src:url(digital_font/digital-7.ttf)  format("opentype");
+}
+
 body {
     background: #00474C;
     background: radial-gradient(circle, #00474C 20%, black 100%); /*#383D3B*/
@@ -93,6 +98,8 @@ input {
 .puzzle3input {
     height: 30px;
     width: 50px;
+    font-family: digital;
+    font-size: 26px;
 }
 
 input::-webkit-outer-spin-button,

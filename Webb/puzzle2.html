@@ -24,14 +24,16 @@
             <form autocomplete="off">
                 <div class="puzzle3settings">
                     <img src="icons/arrow.png" width="25" height="25" class="rotate45">
-                    <input class="puzzle2input" id="puzzle2input1" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
+                    <input class="puzzle2input" id="puzzle2input1" type ="text" placeholder="XXX"
+                     onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                      oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                     maxlength = "2">
+                     maxlength = "3">
                     <br>
                     <img src="icons/arrow.png" width="25" height="25" class="rotate125">
-                    <input class="puzzle2input" id="puzzle2input2" type ="text" onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
+                    <input class="puzzle2input" id="puzzle2input2" type ="text" placeholder="XXX"
+                     onkeypress="isInputNumber()" onkeyup="removePlusMinus(this)"
                      oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                     maxlength = "2">
+                     maxlength = "3">
                 </div>
                 <div>
                     <button type="button" id="puzzle2button" onclick="submitPuzzle2()">Check</button>
@@ -72,7 +74,7 @@
             trigButton.disabled = true;
             setTimeout(function() {
             trigButton.disabled = false;
-            }, 5000);
+            }, 8000);
         }
         // Send puzzle input to Unreal
         function submitPuzzle2() {

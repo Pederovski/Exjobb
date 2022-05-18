@@ -1,12 +1,12 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Peder\Desktop\Exjobb\Exjobb).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\peddr489\Documents\GitHub\Exjobb).
   Building MyProjectEditor...
-  Using Visual Studio 2019 14.29.30133 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 4 processes...
+  Using Visual Studio 2019 14.27.29110 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 12 processes...
     [1/4] WebSocketGameInstance.cpp
-    [2/4] UE4Editor-MyProject-0002.lib
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0002.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0002.exp
-    [3/4] UE4Editor-MyProject-0002.dll
-       Creating library C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0002.suppressed.lib and object C:\Users\Peder\Desktop\Exjobb\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0002.suppressed.exp
+    [2/4] UE4Editor-MyProject-0007.lib
+       Creating library C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0007.lib and object C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0007.exp
+    [3/4] UE4Editor-MyProject-0007.dll
+       Creating library C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0007.suppressed.lib and object C:\Users\peddr489\Documents\GitHub\Exjobb\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\UE4Editor-MyProject-0007.suppressed.exp
     [4/4] MyProjectEditor.target
-  Total time in Parallel executor: 24,57 seconds
-  Total execution time: 26,07 seconds
+  Total time in Parallel executor: 15,54 seconds
+  Total execution time: 16,48 seconds
