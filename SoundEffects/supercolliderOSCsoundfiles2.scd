@@ -331,7 +331,7 @@ OSCdef.new(\CorrectSound,
 		("msg" + msg).postln;
 
 		//~correctsound.set(\gate, 1, \amp, 1);
-		~doorsound = Synth.new(\trigsoundall, [\buf, ~correct.bufnum, \amp, 2]);
+		~doorsound = Synth.new(\trigsoundall, [\buf, ~correct.bufnum, \amp, 0.8]);
 
 	},'/correctSound');
 
@@ -341,7 +341,7 @@ OSCdef.new(\WrongSound,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsoundall, [\buf, ~wrong.bufnum, \amp, 2]);
+		~doorsound = Synth.new(\trigsoundall, [\buf, ~wrong.bufnum, \amp, 0.8]);
 
 	},'/wrongSound');
 
@@ -351,7 +351,7 @@ OSCdef.new(\Complete,
 
 		("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsoundall, [\buf, ~complete.bufnum, \amp, 2]);
+		~doorsound = Synth.new(\trigsoundall, [\buf, ~complete.bufnum, \amp, 0.8]);
 
 	},'/complete');
 
