@@ -99,16 +99,35 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 
 	    Out.ar([0,1,2,3,4,5,6,7], sig);
 	}).add;
+
+	SynthDef(\trigsoundallclock, {
+		arg gate=1, amp=1, pan=0, panSpeak=0, buf, trig=0, loop=0;
+		var sig, sig1, sig2, env;
+
+		env = EnvGen.kr(
+			Env.adsr(1.0,0.0,1.0,1.0),
+			gate,
+			doneAction:2);
+
+		sig = PlayBuf.ar(1, buf, trigger: trig, loop:1);
+
+		//STEREO
+		//sig = Pan2.ar(sig, pan);
+
+	    // 8 channels
+	    //sig = PanAz.ar(8,sig,pan);
+
+		sig = amp * sig * env;
+
+	    Out.ar([0,1,2,3,4,5,6,7], sig);
+	}).add;
+
 )
 
 // 4. And run this code
 (
 
-
-~ampClockTickingPuzzle3 = 0;
-
-~clocksound = Synth.new(\allSpeakers, [\buf, ~clock.bufnum, \amp, ~ampClockTickingPuzzle3]);
-~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum, \amp,  3]);
+~ambientsound = Synth.new(\allSpeakers, [\buf, ~ambient.bufnum]);
 ~completesound = Synth.new(\allSpeakers, [\buf, ~complete.bufnum, \amp, 0.5]);
 ~wrongsound = Synth.new(\allSpeakers, [\buf, ~wrong.bufnum, \amp, 0.5]);
 ~correctsound = Synth.new(\allSpeakers, [\buf, ~correct.bufnum, \amp, 0.5]);
@@ -146,7 +165,7 @@ OSCdef.new(\Door1,
 
 		~ampFlickeringControlRoom = 0;
 		~ampFlickeringPuzzle1 = 0.3;
-		~ampFlickeringPuzzle1Bulb = 0.5;
+		~ampFlickeringPuzzle1Bulb = 0.1;
 		~ampVentilationPuzzle1 = 0.1;
 
 	},'/door1');
@@ -173,12 +192,12 @@ OSCdef.new(\Door3,
 		("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
-
+		~clocksound = Synth.new(\trigsoundallclock, [\buf, ~clock.bufnum, \amp, 0.3]);
 		~ampFlickeringControlRoom = 0;
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
 		~ampVentilationPuzzle1 = 0;
-		~ampClockTickingPuzzle3 = 1;
+
 	},'/door3');
 
 OSCdef.new(\Door4,
@@ -192,7 +211,7 @@ OSCdef.new(\Door4,
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
 		~ampVentilationPuzzle1 = 0;
-		~ampClockTickingPuzzle3 = 0;
+		~clocksound.free;
 	},'/door4');
 
 
@@ -270,7 +289,7 @@ OSCdef.new(\Ambient,
 
 		("msg" + msg).postln;
 
-		~ambientsound.set(\gate, msg[1], \amp, 1);
+		~ambientsound.set(\gate, msg[1], \amp, 0.5);
 
 	},'/ambient');
 
