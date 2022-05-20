@@ -192,7 +192,7 @@ OSCdef.new(\Door3,
 		("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
-		~clocksound = Synth.new(\trigsoundallclock, [\buf, ~clock.bufnum, \amp, 0.3]);
+		~clocksound = Synth.new(\trigsoundallclock, [\buf, ~clock.bufnum, \amp, 0.1]);
 		~ampFlickeringControlRoom = 0;
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
