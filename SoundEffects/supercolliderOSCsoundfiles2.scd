@@ -192,7 +192,7 @@ OSCdef.new(\Door3,
 		//("msg" + msg).postln;
 
 		~doorsound = Synth.new(\trigsound, [\buf, ~door1.bufnum, \pan, 5/4]);
-		~clocksound = Synth.new(\trigsoundallclock, [\buf, ~clock.bufnum, \amp, 0.1]);
+		~clocksound = Synth.new(\trigsoundallclock, [\buf, ~clock.bufnum, \amp, 0.2]);
 		~ampFlickeringControlRoom = 0;
 		~ampFlickeringPuzzle1 = 0;
 		~ampFlickeringPuzzle1Bulb = 0;
@@ -293,23 +293,13 @@ OSCdef.new(\Ambient,
 
 	},'/ambient');
 
-OSCdef.new(\ClockTicking,
-	{
-		arg msg;
-
-		//("msg" + msg).postln;
-
-		~clocksound.set(\gate, msg[1], \amp, ~ampClockTickingPuzzle3);
-
-	},'/clockTickingPuzzle3');
-
 OSCdef.new(\ClockMinute,
 	{
 		arg msg;
 
 		//("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \amp, 1.5, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \amp, 1, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockMinute');
 
@@ -319,7 +309,7 @@ OSCdef.new(\ClockHour,
 
 		//("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \amp, 1.5, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \amp, 1, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockHour');
 
