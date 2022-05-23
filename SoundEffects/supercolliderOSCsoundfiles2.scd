@@ -65,7 +65,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 			gate,
 			doneAction:2);
 
-		sig = PlayBuf.ar(1, buf, trigger: trig, loop:loop);
+		sig = PlayBuf.ar(1, buf, trigger: trig, loop:loop, doneAction:2);
 
 		//STEREO
 		//sig = Pan2.ar(sig, pan);
@@ -87,7 +87,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 			gate,
 			doneAction:2);
 
-		sig = PlayBuf.ar(1, buf, trigger: trig, loop:loop);
+		sig = PlayBuf.ar(1, buf, trigger: trig, loop:loop, doneAction:2);
 
 		//STEREO
 		//sig = Pan2.ar(sig, pan);
@@ -109,7 +109,7 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 			gate,
 			doneAction:2);
 
-		sig = PlayBuf.ar(1, buf, trigger: trig, loop:1);
+		sig = PlayBuf.ar(1, buf, trigger: trig, loop:1, doneAction:2);
 
 		//STEREO
 		//sig = Pan2.ar(sig, pan);
