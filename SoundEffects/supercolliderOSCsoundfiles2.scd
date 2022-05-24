@@ -17,8 +17,8 @@ var filePath = thisProcess.nowExecutingPath.dirname;
 ~clock = Buffer.read(s, filePath +/+ "ClockTicking.wav");
 ~p2_HighPitch = Buffer.read(s, filePath +/+ "P2_HighPitch.wav");
 ~p2_LowPitch = Buffer.read(s, filePath +/+ "P2_LowPitch.wav");
-~p3_HighPitch = Buffer.read(s, filePath +/+ "bell_high_freq.wav");
-~p3_LowPitch = Buffer.read(s, filePath +/+ "bell_low_freq.wav");
+~p3_HighPitch = Buffer.read(s, filePath +/+ "P3_HighPitch.wav");
+~p3_LowPitch = Buffer.read(s, filePath +/+ "P3_LowPitch.wav");
 ~electricity2 = Buffer.read(s, filePath +/+ "ElectricSound_Effect_2.wav");
 
 ~flourescentShort = Buffer.read(s, filePath +/+ "Flourescent_Short.wav");
@@ -299,7 +299,7 @@ OSCdef.new(\ClockMinute,
 
 		//("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \amp, 1, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_HighPitch.bufnum, \amp, 2, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockMinute');
 
@@ -309,7 +309,7 @@ OSCdef.new(\ClockHour,
 
 		//("msg" + msg).postln;
 
-		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \amp, 1, \pan, (msg[1]-0.5)/4.0]);
+		~doorsound = Synth.new(\trigsound, [\buf, ~p3_LowPitch.bufnum, \amp, 2, \pan, (msg[1]-0.5)/4.0]);
 
 	},'/clockHour');
 
