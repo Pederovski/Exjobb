@@ -51,10 +51,13 @@
             <div>
                 <button type="button" id="puzzle3button" onclick="submitPuzzle3()">Check</button>
             </div>
-        </form> 
+        </form>
+        <div class ="hint1" id="hint1" style="visibility:hidden;">Hint: You can use check several times, the code resets only when pressing "trigger"</div> 
     </section>
     <script>
         console.log("Entered Puzzle3 script\n");
+
+        var times_submitted = 0;
 
         // Remove + -
         function removePlusMinus(input) {
@@ -103,6 +106,13 @@
             
             console.log(visual_hour + visual_minute + " " + audio_hour + audio_minute);
             socket.send(visual_hour + visual_minute + " " + audio_hour + audio_minute);
+
+            // Make hint show up after pressing 'submit' a set number of times
+            if(times_submitted == 5) {
+                document.getElementById('hint1').style.visibility = "visible";
+                console.log(times_submitted);
+            }
+            times_submitted++;
         }
     </script>
     <br>

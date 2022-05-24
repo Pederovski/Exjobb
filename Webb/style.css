@@ -177,3 +177,8 @@ form {
     -ms-transform: rotate(125deg);
     transform: rotate(125deg);
 }
+
+.hint1 {
+    font-size: 12px;
+    color: white;
+}
