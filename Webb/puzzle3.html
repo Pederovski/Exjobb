@@ -108,7 +108,7 @@
             socket.send(visual_hour + visual_minute + " " + audio_hour + audio_minute);
 
             // Make hint show up after pressing 'submit' a set number of times
-            if(times_submitted == 5) {
+            if(times_submitted == 2) {
                 document.getElementById('hint1').style.visibility = "visible";
                 console.log(times_submitted);
             }

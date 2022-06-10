@@ -41,9 +41,12 @@
                 <br><br>
             </form>
         </div>
+        <div class ="hint1" id="hint1" style="visibility:hidden;">Hint: You can use check several times, the code resets only when pressing "trigger"</div>
     </section>
     <script>
         console.log("Entered Puzzle2 script\n");
+
+        var times_submitted = 0;
 
         // Remove + -
         function removePlusMinus(input) {
@@ -87,6 +90,13 @@
             var puzzle2_2 = document.getElementById('puzzle2input2').value;
             console.log(puzzle2_1 + "+" + puzzle2_2);
             socket.send(puzzle2_1 + "+" + puzzle2_2);
+
+            // Make hint show up after pressing 'submit' a set number of times
+            if(times_submitted == 2) {
+                document.getElementById('hint1').style.visibility = "visible";
+                console.log(times_submitted);
+            }
+            times_submitted++;
         }
     </script>
     <br>
